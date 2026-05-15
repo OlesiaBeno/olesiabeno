@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>6 кроків до усвідомленого стилю — Олеся Beno</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FDFBF7;
+  --bg-warm: #F7F0E8;
+  --bg-card: #FFF9F4;
+  --text: #1C1410;
+  --text-soft: #3D2F26;
+  --text-muted: #6B5D52;
+  --rose: #9B2D3F;
+  --rose-soft: #C4465A;
+  --rose-bg: rgba(155, 45, 63, 0.07);
+  --blush: #F5E1D8;
+  --terracotta: #C4927A;
+  --line: rgba(45, 34, 25, 0.1);
+  --font-display: 'Lora', Georgia, serif;
+  --font-body: 'Montserrat', system-ui, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #EDE6DD;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+.mobile-frame {
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+  background: var(--bg);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 80px;
+}
+
+@media (min-width: 500px) {
+  .mobile-frame {
+    box-shadow:
+      0 0 60px rgba(45, 34, 25, 0.08),
+      0 0 120px rgba(45, 34, 25, 0.04);
+  }
+}
+
+/* ═══ HERO ═══ */
+.hero { padding: 48px 28px 32px; background: var(--bg); position: relative; }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 28px; right: 28px; height: 1px; background: var(--line); }
+
+.hero-start-badge { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-size: 13px; font-weight: 500; color: var(--text); padding: 10px 18px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 999px; margin-bottom: 32px; opacity: 0; animation: fadeUp 0.8s ease 0.1s forwards; box-shadow: 0 1px 4px rgba(45, 34, 25, 0.04); }
+.hero-start-badge strong { font-weight: 700; color: var(--rose); }
+.hero-start-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--rose); animation: dotPulse 2s ease-in-out infinite; flex-shrink: 0; }
+@keyframes dotPulse { 0%, 100% { opacity: 0.5; transform: scale(1); box-shadow: 0 0 0 0 rgba(155,45,63,0.3); } 50% { opacity: 1; transform: scale(1.2); box-shadow: 0 0 8px 2px rgba(155,45,63,0.2); } }
+
+.hero-hook { font-family: var(--font-display); font-weight: 500; font-size: 34px; color: var(--text); line-height: 1.18; letter-spacing: -0.015em; margin-bottom: 16px; opacity: 0; animation: fadeUp 0.8s ease 0.2s forwards; }
+.hero-highlight { position: relative; display: inline; }
+.hero-highlight::before { content: ''; position: absolute; left: -4px; right: -4px; bottom: 0; height: 40%; background: rgba(155, 45, 63, 0.13); border-radius: 3px; z-index: -1; }
+
+.hero-subtext { font-family: var(--font-body); font-size: 16px; font-weight: 400; color: var(--text-soft); line-height: 1.65; margin-bottom: 36px; max-width: 380px; opacity: 0; animation: fadeUp 0.8s ease 0.35s forwards; }
+.hero-accent { font-family: var(--font-display); font-weight: 600; font-style: italic; color: var(--rose); font-size: 1.15em; }
+
+.hero-photo-wrap { margin: 0 0 32px; display: flex; justify-content: center; opacity: 0; animation: fadeUp 0.8s ease 0.45s forwards; }
+.hero-photo-frame { position: relative; width: 55%; max-width: 220px; border-radius: 20px; border: 2.5px solid var(--rose); overflow: hidden; box-shadow: 0 8px 32px rgba(155, 45, 63, 0.12), 0 2px 8px rgba(45, 34, 25, 0.06); transform: rotate(-1.5deg); }
+.hero-photo { display: block; width: 100%; height: auto; border-radius: 17px; }
+
+/* Hero before/after comparison */
+.hero-comparison { display: grid; grid-template-columns: 1fr auto 1fr; gap: 6px; align-items: start; padding: 8px 4px 16px; }
+.hero-comp-item { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.hero-comp-label { font-family: var(--font-body); font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; padding: 5px 14px; border-radius: 999px; line-height: 1; }
+.hero-comp-label--before { color: var(--text-muted); background: rgba(45,34,25,0.06); border: 1px solid var(--line); }
+.hero-comp-label--after { color: var(--rose); background: var(--rose-bg); border: 1px solid rgba(155,45,63,0.28); box-shadow: 0 2px 8px rgba(155,45,63,0.12); }
+.hero-comp-frame { position: relative; width: 100%; aspect-ratio: 3/4; border-radius: 14px; overflow: hidden; background: var(--bg-card); }
+.hero-comp-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-comp-frame--before { border: 2px solid rgba(45,34,25,0.18); transform: rotate(-2.5deg); box-shadow: 0 4px 14px rgba(45,34,25,0.1); filter: saturate(0.5) brightness(0.96) contrast(0.95); }
+.hero-comp-frame--after { border: 2.5px solid var(--rose); transform: rotate(2.5deg); box-shadow: 0 10px 32px rgba(155, 45, 63, 0.18), 0 2px 8px rgba(45, 34, 25, 0.08); }
+.hero-comp-arrow { display: flex; align-items: center; justify-content: center; padding-top: 56px; color: var(--rose); font-family: var(--font-display); font-style: italic; font-weight: 700; font-size: 22px; line-height: 1; }
+.hero-comp-arrow svg { display: block; }
+.hero-comp-caption { grid-column: 1 / -1; text-align: center; margin-top: 10px; font-family: var(--font-display); font-style: italic; font-size: 13.5px; color: var(--text-soft); line-height: 1.5; }
+.hero-comp-caption strong { color: var(--rose); font-weight: 600; font-style: normal; }
+
+.hero-card { background: var(--bg-card); border: 1px solid rgba(45, 34, 25, 0.08); border-radius: 16px; padding: 24px 22px 20px; margin-bottom: 20px; position: relative; opacity: 0; animation: fadeUp 0.8s ease 0.5s forwards; box-shadow: 0 2px 16px rgba(45, 34, 25, 0.04); }
+.hero-card-label { font-family: var(--font-body); font-size: 11px; font-weight: 700; color: var(--rose); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+.hero-card-label::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+.hero-card-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.hero-card-list li { font-family: var(--font-body); font-size: 15px; font-weight: 400; color: var(--text); line-height: 1.6; padding-left: 20px; position: relative; border-left: 2px solid var(--blush); padding-top: 2px; padding-bottom: 2px; }
+.hero-card-list em { font-style: italic; color: var(--text-soft); }
+.hero-card-list strong { font-weight: 600; color: var(--text); }
+.hero-vampire { color: var(--text); font-weight: 700; font-style: normal; }
+
+.hero-result { background: var(--rose-bg); border: 1px solid rgba(155, 45, 63, 0.12); border-radius: 14px; padding: 18px 22px; margin-bottom: 24px; text-align: center; opacity: 0; animation: fadeUp 0.8s ease 0.6s forwards; }
+.hero-result-text { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: 16px; color: var(--text); line-height: 1.55; }
+.hero-result-text strong { color: var(--rose); font-weight: 600; font-style: italic; }
+
+.hero-amplify { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: 17px; color: var(--text); line-height: 1.55; padding: 20px 20px; border-left: 3px solid var(--rose); background: linear-gradient(90deg, var(--rose-bg) 0%, transparent 100%); border-radius: 0 12px 12px 0; margin-bottom: 32px; opacity: 0; animation: fadeUp 0.8s ease 0.65s forwards; }
+
+.hero-cta-wrap { display: flex; flex-direction: column; align-items: center; opacity: 0; animation: fadeUp 0.8s ease 0.85s forwards; }
+.hero-price { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+.hero-price-old { font-family: var(--font-display); font-style: italic; font-size: 18px; color: var(--text-muted); text-decoration: line-through; text-decoration-color: rgba(160, 145, 127, 0.6); }
+.hero-price-new { font-family: var(--font-display); font-weight: 700; font-size: 32px; color: var(--rose); letter-spacing: -0.02em; }
+.hero-cta-container { position: relative; display: inline-flex; justify-content: center; width: 100%; margin-bottom: 14px; }
+.hero-cta { display: flex; align-items: center; justify-content: center; width: 100%; background: var(--rose); color: #fff; text-decoration: none; font-family: var(--font-body); font-size: 16px; font-weight: 600; letter-spacing: 0.03em; padding: 22px 32px; border-radius: 16px; transition: all 0.3s ease; box-shadow: 0 6px 24px rgba(155, 45, 63, 0.28), 0 2px 6px rgba(155, 45, 63, 0.15); }
+.hero-cta:hover { background: var(--rose-soft); transform: translateY(-2px); box-shadow: 0 10px 32px rgba(155, 45, 63, 0.38), 0 3px 8px rgba(155, 45, 63, 0.2); }
+.hero-cta:active { transform: translateY(0); }
+
+.hero-badge { position: absolute; top: -20px; right: -8px; width: 64px; height: 64px; z-index: 3; }
+.hero-badge-ring { position: absolute; inset: 0; border: 1.5px dashed var(--rose-soft); border-radius: 50%; animation: badgeSpin 16s linear infinite; }
+.hero-badge-disc { position: absolute; inset: 5px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--rose); font-family: var(--font-body); font-weight: 700; font-size: 14px; letter-spacing: -0.02em; box-shadow: 0 3px 12px rgba(45, 34, 25, 0.15); }
+
+.hero-price-note { font-family: var(--font-body); font-size: 13px; color: var(--text-muted); margin-top: 2px; opacity: 0; animation: fadeIn 0.6s ease 1s forwards; text-align: center; }
+
+/* ═══ TRUST BAND ═══ */
+.trust-band { padding: 36px 28px 40px; background: var(--bg-warm); background-image: radial-gradient(ellipse at center, rgba(245, 197, 176, 0.14) 0%, transparent 70%); border-bottom: 1px solid var(--line); text-align: center; position: relative; }
+.trust-band::before, .trust-band::after { content: ''; position: absolute; top: 50%; width: 32px; height: 1px; background: var(--rose); opacity: 0.35; }
+.trust-band::before { left: 28px; }
+.trust-band::after { right: 28px; }
+.trust-eyebrow { font-family: var(--font-body); font-size: 10px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: var(--rose); margin-bottom: 16px; }
+.trust-stars { display: inline-flex; gap: 4px; margin-bottom: 12px; color: var(--rose); font-size: 22px; line-height: 1; letter-spacing: 0.06em; }
+.trust-stars span { text-shadow: 0 1px 2px rgba(155, 45, 63, 0.2); }
+.trust-score { display: inline-flex; align-items: baseline; gap: 6px; margin-bottom: 12px; line-height: 1; }
+.trust-number { font-family: var(--font-display); font-size: 48px; font-weight: 600; color: var(--rose); letter-spacing: -0.03em; line-height: 1; }
+.trust-max { font-family: var(--font-display); font-size: 20px; font-weight: 400; font-style: italic; color: var(--text-muted); letter-spacing: -0.01em; }
+.trust-text { font-family: var(--font-display); font-size: 16px; font-style: italic; color: var(--text-soft); line-height: 1.5; max-width: 340px; margin: 0 auto; }
+.trust-text strong { color: var(--rose); font-weight: 600; font-style: normal; }
+
+/* ═══ BONUSES ═══ */
+.bonuses { padding: 32px 28px 36px; background: var(--bg-warm); position: relative; }
+.bonuses::before { content: ''; position: absolute; top: 0; left: 28px; right: 28px; height: 1px; background: var(--line); }
+.bonuses-header { margin-bottom: 20px; text-align: center; }
+.bonuses-eyebrow { display: inline-block; font-family: var(--font-body); font-size: 11px; font-weight: 700; color: var(--rose); letter-spacing: 0.15em; text-transform: uppercase; background: var(--rose-bg); padding: 6px 14px; border-radius: 999px; margin-bottom: 16px; }
+.bonuses-title { font-family: var(--font-display); font-size: 21px; font-weight: 500; color: var(--text); line-height: 1.3; letter-spacing: -0.01em; }
+.bonuses-title em { color: var(--rose); font-style: italic; font-weight: 600; }
+
+/* Timer */
+.bonuses-timer-wrap { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 18px; }
+.bonuses-timer-box { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 12px 22px 10px; background: var(--bg); border: 1.5px dashed var(--terracotta); border-radius: 10px; min-width: 78px; box-shadow: 0 2px 8px rgba(45, 34, 25, 0.04); }
+.bonuses-timer-num { font-family: var(--font-display); font-weight: 700; font-size: 30px; color: var(--text); line-height: 1; letter-spacing: -0.02em; }
+.bonuses-timer-unit { font-family: var(--font-body); font-size: 9px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.12em; text-transform: uppercase; }
+.bonuses-timer-sep { font-family: var(--font-display); font-size: 26px; font-weight: 600; color: var(--text-muted); line-height: 1; padding-bottom: 14px; animation: timerBlink 1s ease-in-out infinite; }
+@keyframes timerBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+/* Spots counter */
+.bonuses-spots { padding: 18px 16px 20px; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; margin-bottom: 22px; }
+.bonuses-live { display: flex; justify-content: center; align-items: center; gap: 8px; margin-bottom: 14px; }
+.bonuses-live-dot { width: 7px; height: 7px; background: var(--rose-soft); border-radius: 50%; animation: dotPulse 2s ease-in-out infinite; box-shadow: 0 0 8px rgba(196,70,90,0.35); }
+.bonuses-live-text { font-family: var(--font-body); font-size: 10px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--rose); }
+.spots-counter { display: flex; justify-content: center; align-items: center; gap: 8px; margin-bottom: 14px; }
+.spots-cell { flex: 1; max-width: 140px; background: var(--bg-warm); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px 10px; text-align: center; }
+.spots-cell--active { border-color: rgba(155, 45, 63, 0.3); background: var(--rose-bg); }
+.spots-num { display: block; font-family: var(--font-display); font-size: 38px; font-weight: 700; color: var(--text); line-height: 1; letter-spacing: -0.02em; margin-bottom: 6px; transition: color 0.3s ease; }
+.spots-cell--active .spots-num { color: var(--rose); }
+.spots-label { display: block; font-family: var(--font-body); font-size: 9px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); }
+.spots-sep { font-family: var(--font-display); font-size: 24px; color: var(--text-muted); padding-bottom: 18px; font-weight: 300; }
+.spots-progress-wrap { max-width: 300px; margin: 0 auto; }
+.spots-progress { height: 3px; background: var(--line); border-radius: 2px; overflow: hidden; }
+.spots-progress-fill { height: 100%; background: linear-gradient(90deg, var(--rose) 0%, var(--terracotta) 100%); border-radius: 2px; transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 0 6px rgba(155,45,63,0.2); }
+.spots-progress-text { display: flex; justify-content: space-between; margin-top: 8px; font-family: var(--font-body); font-size: 9px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-muted); }
+@keyframes spotsPulse { 0% { transform: scale(1); } 30% { transform: scale(1.12); text-shadow: 0 0 10px rgba(155,45,63,0.4); } 100% { transform: scale(1); text-shadow: none; } }
+.spots-pulse { animation: spotsPulse 0.9s cubic-bezier(0.4, 0, 0.2, 1); }
+
+/* Bonus cards */
+.bonuses-cards { display: flex; flex-direction: column; gap: 8px; }
+.bonus-card { display: flex; align-items: flex-start; gap: 14px; padding: 18px 18px; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 1px 4px rgba(45, 34, 25, 0.03); }
+.bonus-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(45, 34, 25, 0.08); }
+.bonus-card-icon { width: 42px; height: 42px; border-radius: 10px; background: var(--rose-bg); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+.bonus-gift { font-size: 24px; display: inline-block; animation: giftWiggle 2s ease-in-out infinite; }
+.bonus-card:nth-child(2) .bonus-gift { animation-delay: 0.3s; }
+.bonus-card:nth-child(3) .bonus-gift { animation-delay: 0.6s; }
+@keyframes giftWiggle { 0%, 100% { transform: rotate(0deg) scale(1); } 15% { transform: rotate(-12deg) scale(1.1); } 30% { transform: rotate(10deg) scale(1.05); } 45% { transform: rotate(-6deg) scale(1); } 60% { transform: rotate(0deg); } }
+.bonus-card-body { flex: 1; min-width: 0; }
+.bonus-card-tag { display: inline-block; font-family: var(--font-body); font-size: 10px; font-weight: 700; color: var(--rose); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 4px; }
+.bonus-card-title { font-family: var(--font-display); font-size: 15px; font-weight: 600; color: var(--text); line-height: 1.3; margin-bottom: 2px; }
+.bonus-card-desc { font-family: var(--font-body); font-size: 13px; font-weight: 400; color: var(--text-muted); line-height: 1.5; }
+.bonus-card-what { font-family: var(--font-body); font-size: 13.5px; font-weight: 400; color: var(--text-soft); line-height: 1.6; margin-top: 6px; margin-bottom: 12px; }
+.bonus-card-result { background: var(--rose-bg); border-left: 2px solid var(--rose); padding: 10px 12px; border-radius: 0 8px 8px 0; }
+.bonus-card-result-label { display: block; font-family: var(--font-body); font-size: 9px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rose); margin-bottom: 4px; }
+.bonus-card-result-text { font-family: var(--font-display); font-style: italic; font-size: 13px; color: var(--text); line-height: 1.5; }
+
+/* ═══ PROBLEM ═══ */
+.problem { padding: 40px 28px 36px; background: var(--bg); position: relative; }
+.problem::before { content: ''; position: absolute; top: 0; left: 28px; right: 28px; height: 1px; background: var(--line); }
+.problem-badge { display: block; text-align: center; font-family: var(--font-display); font-size: 28px; font-weight: 600; font-style: italic; color: var(--rose); margin: 0 auto 28px; padding: 0 16px; position: relative; width: fit-content; }
+.problem-badge::before, .problem-badge::after { content: ''; position: absolute; top: 50%; width: 40px; height: 1px; background: var(--rose); opacity: 0.35; }
+.problem-badge::before { right: 100%; }
+.problem-badge::after { left: 100%; }
+.problem-morning-card { background: #1A1512; border-radius: 16px; padding: 28px 24px; margin-bottom: 24px; position: relative; overflow: hidden; }
+.problem-morning-time { position: absolute; top: 16px; right: 20px; font-family: var(--font-display); font-size: 48px; font-weight: 300; font-style: italic; color: rgba(255,255,255,0.08); line-height: 1; }
+.problem-morning-card p { font-family: var(--font-body); font-size: 14px; font-weight: 400; color: rgba(255,255,255,0.75); line-height: 1.7; margin-bottom: 10px; position: relative; z-index: 1; }
+.problem-morning-card strong { color: #fff; font-weight: 600; }
+.problem-morning-end { color: rgba(255,255,255,0.95) !important; font-weight: 500 !important; margin-top: 16px !important; }
+.problem-quote-card { background: var(--rose-bg); border-radius: 14px; padding: 22px 20px; text-align: center; margin-bottom: 28px; border: 1px solid rgba(155,45,63,0.1); }
+.problem-quote-text { font-family: var(--font-display); font-size: 22px; font-weight: 500; font-style: italic; color: var(--rose); letter-spacing: -0.01em; }
+.problem-also { font-family: var(--font-display); font-size: 17px; font-weight: 500; color: var(--text); margin-bottom: 16px; }
+.problem-cards { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
+.problem-card { font-family: var(--font-body); font-size: 14px; font-weight: 400; color: var(--text-soft); line-height: 1.6; padding: 14px 18px 14px 18px; background: var(--bg-card); border: 1px solid rgba(45,34,25,0.06); border-radius: 12px; position: relative; box-shadow: 0 1px 4px rgba(45,34,25,0.03); }
+.problem-card strong { color: var(--text); font-weight: 600; }
+
+/* NEW — Pain Cards (structured, typography-driven) */
+.problem-pains { display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+.pain-card { position: relative; background: var(--bg-card); border: 1px solid rgba(45,34,25,0.07); border-radius: 16px; padding: 24px 22px 22px; transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease; box-shadow: 0 1px 4px rgba(45,34,25,0.03); overflow: hidden; }
+.pain-card::before { content: ''; position: absolute; left: 0; top: 24px; bottom: 22px; width: 3px; background: var(--rose); opacity: 0; transition: opacity 0.35s ease; border-radius: 0 2px 2px 0; }
+.pain-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(155,45,63,0.08); border-color: rgba(155,45,63,0.18); }
+.pain-card:hover::before { opacity: 1; }
+.pain-tag { display: flex; align-items: center; gap: 12px; font-family: var(--font-body); font-size: 10px; font-weight: 700; color: var(--rose); letter-spacing: 0.24em; text-transform: uppercase; margin-bottom: 12px; }
+.pain-tag-num { font-family: var(--font-display); font-size: 14px; font-weight: 600; font-style: italic; letter-spacing: 0; color: var(--rose); line-height: 1; }
+.pain-tag::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(155,45,63,0.25) 0%, transparent 100%); }
+.pain-title { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--text); line-height: 1.3; letter-spacing: -0.01em; margin-bottom: 10px; }
+.pain-title em { font-style: italic; color: var(--rose); font-weight: 600; }
+.pain-text { font-family: var(--font-body); font-size: 14px; font-weight: 400; color: var(--text-soft); line-height: 1.7; }
+.pain-text strong { color: var(--text); font-weight: 600; }
+.pain-text em { font-style: italic; color: var(--rose); font-weight: 500; }
+.pain-text .pain-accent { color: var(--rose); font-weight: 600; font-style: normal; }
+.problem-absolve-card { background: var(--rose-bg); border-radius: 14px; padding: 24px 22px; text-align: center; border: 1px solid rgba(155,45,63,0.1); margin-bottom: 28px; }
+.problem-absolve-card p { font-family: var(--font-display); font-size: 17px; font-weight: 400; color: var(--text); line-height: 1.5; margin-bottom: 4px; }
+.problem-absolve-card p:last-child { margin-bottom: 0; }
+.problem-absolve-card em { color: var(--rose); font-style: italic; font-weight: 500; }
+.problem-absolve-card strong { font-weight: 700; }
+
+/* Explain highlight */
+.problem-highlight { font-family: var(--font-display); font-style: italic; font-weight: 500; font-size: 19px; color: var(--text); line-height: 1.45; padding: 18px 20px; border-left: 3px solid var(--rose); background: linear-gradient(90deg, var(--rose-bg) 0%, transparent 100%); border-radius: 0 12px 12px 0; margin-bottom: 32px; }
+.problem-highlight strong { color: var(--rose); font-weight: 600; }
+
+/* Process 4 steps */
+.problem-process { margin-bottom: 32px; }
+.process-label { font-family: var(--font-body); font-size: 11px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: var(--rose); text-align: center; margin-bottom: 10px; }
+.process-title { font-family: var(--font-display); font-size: 20px; font-weight: 500; font-style: italic; color: var(--text); text-align: center; line-height: 1.3; margin-bottom: 22px; max-width: 340px; margin-left: auto; margin-right: auto; }
+.process-steps { display: flex; flex-direction: column; gap: 10px; }
+.process-step { background: var(--bg-card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; display: flex; align-items: center; gap: 16px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.process-step:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(155,45,63,0.1); }
+.process-num { font-family: var(--font-display); font-size: 28px; font-weight: 600; font-style: italic; color: var(--rose); line-height: 1; flex-shrink: 0; min-width: 36px; }
+.process-step p { font-family: var(--font-body); font-size: 14px; font-weight: 500; color: var(--text); line-height: 1.45; }
+.process-arrow-center { text-align: center; font-family: var(--font-display); font-size: 22px; color: var(--text-muted); margin: -2px 0; line-height: 1; }
+
+/* Bridge */
+.problem-bridge { text-align: center; padding: 8px 0 4px; }
+.problem-bridge p { font-family: var(--font-display); font-size: 20px; font-weight: 400; color: var(--text); line-height: 1.45; margin-bottom: 20px; max-width: 380px; margin-left: auto; margin-right: auto; }
+.problem-bridge em { color: var(--rose); font-style: italic; font-weight: 500; }
+.bridge-arrow { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; color: var(--text-muted); }
+.bridge-arrow-line { width: 1px; height: 24px; background: linear-gradient(180deg, transparent 0%, var(--text-muted) 100%); }
+.bridge-arrow-mark { font-size: 20px; line-height: 1; animation: arrowDown 2.5s ease-in-out infinite; }
+@keyframes arrowDown { 0%, 100% { transform: translateY(0); opacity: 0.5; } 50% { transform: translateY(5px); opacity: 1; } }
+
+/* ═══ AUTHOR ═══ */
+.author { padding: 40px 28px 36px; background: var(--bg-warm); text-align: center; position: relative; }
+.author::before { content: ''; position: absolute; top: 0; left: 28px; right: 28px; height: 1px; background: var(--line); }
+.author-eyebrow { display: inline-block; font-family: var(--font-body); font-size: 11px; font-weight: 700; color: var(--rose); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 24px; }
+.author-photo-wrap { position: relative; width: 280px; height: 320px; margin: 0 auto 30px; }
+.author-photo-wrap::before { content: ''; position: absolute; inset: 0; background: var(--blush); border-radius: 22px; transform: rotate(0deg); opacity: 0.55; z-index: 0; }
+.author-photo-wrap::after { content: ''; position: absolute; inset: 0; border: 1.5px solid rgba(155,45,63,0.38); border-radius: 22px; transform: rotate(0deg); z-index: 0; }
+.author-photo-frame { position: relative; width: 100%; height: 100%; border-radius: 20px; border: 2.5px solid var(--rose); overflow: hidden; box-shadow: 0 14px 40px rgba(155,45,63,0.22), 0 4px 14px rgba(45,34,25,0.08); transform: rotate(0deg); z-index: 1; background: var(--bg); }
+.author-photo-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.author-photo-monogram { position: absolute; bottom: -10px; right: -14px; width: 54px; height: 54px; border-radius: 50%; background: linear-gradient(135deg, var(--rose) 0%, var(--rose-soft) 100%); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-style: italic; font-weight: 700; font-size: 24px; box-shadow: 0 8px 22px rgba(155,45,63,0.38); transform: rotate(6deg); z-index: 2; letter-spacing: -0.02em; padding-bottom: 2px; }
+.author-photo-monogram::before { content: ''; position: absolute; inset: 3px; border: 1px solid rgba(255,255,255,0.35); border-radius: 50%; }
+.author-name { font-family: var(--font-display); font-size: 30px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+.author-title { font-family: var(--font-body); font-size: 12px; font-weight: 500; color: var(--text-muted); letter-spacing: 0.08em; margin-bottom: 20px; }
+.author-quote { font-family: var(--font-display); font-style: italic; font-weight: 400; font-size: 16px; color: var(--text); line-height: 1.55; padding: 18px 20px; border-left: 3px solid var(--rose); background: var(--bg); border-radius: 0 12px 12px 0; text-align: left; margin-bottom: 24px; box-shadow: 0 1px 6px rgba(45,34,25,0.04); }
+.author-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-bottom: 24px; }
+.author-stat { background: var(--bg); border-radius: 14px; padding: 16px 8px 12px; border: 1px solid var(--line); text-align: center; }
+.author-stat-num { display: block; font-family: var(--font-display); font-weight: 700; font-size: 26px; color: var(--rose); line-height: 1; margin-bottom: 4px; }
+.author-stat-label { display: block; font-family: var(--font-body); font-size: 10px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; }
+.author-text { text-align: left; }
+.author-text p { font-family: var(--font-body); font-size: 14px; font-weight: 400; color: var(--text-soft); line-height: 1.7; margin-bottom: 10px; }
+.author-text p:last-child { margin-bottom: 0; }
+.author-text strong { color: var(--text); font-weight: 600; }
+
+/* ═══ HERO LOOKBOOK STRIP ═══ */
+.hero-lookbook { margin: 28px 0 0; padding: 22px 0 0; border-top: 1px solid var(--line); opacity: 0; animation: fadeUp 0.8s ease 1.05s forwards; }
+.hero-lookbook-label { text-align: center; font-family: var(--font-body); font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 16px; }
+.hero-lookbook-label strong { color: var(--rose); font-weight: 700; }
+.hero-lookbook-strip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.lookbook-tile { aspect-ratio: 3/4; overflow: hidden; border-radius: 12px; box-shadow: 0 6px 18px rgba(45,34,25,0.12), 0 2px 6px rgba(45,34,25,0.06); transition: transform 0.4s ease, box-shadow 0.4s ease; background: var(--bg-card); }
+.lookbook-tile:nth-child(1) { transform: rotate(-2deg); }
+.lookbook-tile:nth-child(2) { transform: rotate(0); margin-top: -6px; }
+.lookbook-tile:nth-child(3) { transform: rotate(2deg); }
+.lookbook-tile img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.lookbook-tile:hover { transform: scale(1.04) rotate(0); z-index: 2; box-shadow: 0 12px 28px rgba(45,34,25,0.18); }
+
+/* ═══ PROBLEM CINEMA INTRO ═══ */
+.problem { padding-top: 0 !important; }
+.problem-cinema { position: relative; width: calc(100% + 56px); margin: 0 -28px 32px; height: 300px; overflow: hidden; }
+.problem-cinema-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; filter: grayscale(0.6) brightness(0.95); }
+.problem-cinema::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(26,21,18,0.15) 0%, rgba(26,21,18,0.55) 50%, rgba(26,21,18,0.92) 100%); z-index: 1; }
+.problem-cinema-text { position: absolute; left: 28px; right: 28px; bottom: 28px; z-index: 2; }
+.problem-cinema-eyebrow { display: block; color: var(--blush); font-family: var(--font-body); font-size: 10px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; margin-bottom: 10px; opacity: 0.9; }
+.problem-cinema-title { color: #fff; font-family: var(--font-display); font-size: 38px; font-weight: 600; font-style: italic; line-height: 1; letter-spacing: -0.01em; }
+.problem-cinema-title::after { content: ''; display: block; width: 36px; height: 2px; background: var(--rose); margin-top: 12px; opacity: 0.85; }
+
+/* ═══ WHOM HEADER PHOTO ═══ */
+.whom-author-label { text-align: center; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px; }
+.whom-author-label strong { color: var(--rose); font-weight: 700; }
+.whom-header-photo { position: relative; width: 220px; height: 280px; margin: 0 auto 20px; border-radius: 14px; overflow: hidden; border: 2px solid var(--rose); transform: rotate(0deg); box-shadow: 0 10px 26px rgba(155,45,63,0.18), 0 3px 10px rgba(45,34,25,0.08); }
+.whom-header-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.whom-header-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(155,45,63,0.18) 100%); }
+
+/* ═══ FINAL PATH ALIVE WITH BG PHOTO ═══ */
+.final-path--alive { position: relative; overflow: hidden; isolation: isolate; }
+.final-path--alive::before { content: ''; position: absolute; inset: 0; background-image: url('photo4.jpg'); background-size: cover; background-position: center 25%; opacity: 0.12; z-index: -2; }
+.final-path--alive::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,249,244,0.85) 0%, rgba(245,225,216,0.7) 100%); z-index: -1; }
+
+/* ═══ PROGRAM PHOTO ACCENT ═══ */
+.program-photo-accent { width: 100%; max-width: 280px; aspect-ratio: 4/5; margin: 32px auto 0; border-radius: 16px; overflow: hidden; border: 2px solid var(--rose); transform: rotate(1.5deg); box-shadow: 0 12px 30px rgba(45,34,25,0.15), 0 4px 10px rgba(45,34,25,0.06); }
+.program-photo-accent img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(0.1); }
+
+/* ═══ GUARANTEE PHOTO ECHO (subtle bg of photo5 in side-corner) ═══ */
+.guarantee { position: relative; overflow: hidden; }
+.guarantee::after { content: ''; position: absolute; bottom: -40px; right: -40px; width: 220px; height: 280px; background-image: url('photo5.jpg'); background-size: cover; background-position: center; opacity: 0.06; border-radius: 50%; pointer-events: none; z-index: 0; transform: rotate(-8deg); }
+.guarantee > * { position: relative; z-index: 1; }
+
+/* ═══ SITE FOOTER ═══ */
+.site-footer { background: #1A1512; color: rgba(255,255,255,0.6); padding: 48px 28px 36px; margin-top: 24px; font-family: var(--font-body); }
+.footer-fops { display: flex; flex-direction: column; gap: 28px; margin-bottom: 32px; padding-bottom: 28px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.footer-fop-name { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; color: #fff; margin-bottom: 12px; text-transform: uppercase; line-height: 1.45; }
+.footer-fop-line { font-size: 11px; font-weight: 400; letter-spacing: 0.16em; color: rgba(255,255,255,0.45); margin-bottom: 5px; text-transform: uppercase; }
+.footer-fop-line:last-child { margin-bottom: 0; }
+.footer-disclaimer { margin-bottom: 32px; }
+.footer-disclaimer p { font-size: 10.5px; line-height: 1.7; color: rgba(255,255,255,0.5); margin-bottom: 18px; }
+.footer-disclaimer p:last-child { margin-bottom: 0; }
+.footer-links { display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); margin-bottom: 24px; }
+.footer-links a { color: #fff; font-size: 13px; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; transition: color 0.2s ease; }
+.footer-links a:hover { color: var(--rose-soft); }
+.footer-copy { font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 0.1em; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.06); text-align: center; }
+
+
+/* ═══ TRANSFORMATION ═══ */
+.transform { padding: 40px 28px 36px; background: var(--bg); position: relative; }
+.transform::before { content: ''; position: absolute; top: 0; left: 28px; right: 28px; height: 1px; background: var(--line); }
+.transform-eyebrow { display: inline-block; font-family: var(--font-body); font-size: 11px; font-weight: 700; color: var(--rose); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px; }
+.transform-title { font-family: var(--font-display); font-size: 26px; font-weight: 500; color: var(--text); margin-bottom: 28px; letter-spacing: -0.01em; }
+.transform-title em { color: var(--rose); font-style: italic; }
+.transform-grid { display: grid; grid-template-columns: 1fr auto 1fr; gap: 10px; align-items: start; }
+.transform-arrow { font-family: var(--font-display); font-size: 24px; color: var(--rose); align-self: center; margin-top: 40px; }
+.transform-col { border-radius: 16px; padding: 20px 16px; }
+.transform-col--before { background: var(--bg-warm); border: 1px solid var(--line); }
+.transform-col--after { background: var(--bg-card); border: 2px solid var(--rose); box-shadow: 0 4px 20px rgba(155,45,63,0.1); }
+.transform-label { display: block; font-family: var(--font-body); font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; text-align: center; margin-bottom: 14px; padding: 5px 12px; border-radius: 999px; }
+.transform-label--before { color: var(--text-muted); background: rgba(45,34,25,0.06); }
+.transform-label--after { color: var(--rose); background: var(--rose-bg); }
+.transform-photo { width: 100%; aspect-ratio: 3/4; border-radius: 10px; overflow: hidden; margin-bottom: 14px; background: var(--bg); position: relative; }
+.transform-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.transform-photo--placeholder { border: 1.5px dashed rgba(45,34,25,0.15); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; color: var(--text-muted); }
+.transform-photo--after.transform-photo--placeholder { border-color: rgba(155,45,63,0.25); color: var(--rose); }
+.transform-photo--placeholder span { font-family: var(--font-body); font-size: 10px; font-weight: 500; letter-spacing: 0.06em; }
+.transform-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.transform-list li { font-family: var(--font-body); font-size: 12px; font-weight: 500; color: var(--text-soft); line-height: 1.4; padding-left: 16px; position: relative; }
+.transform-list li::before { content: '·'; position: absolute; left: 4px; top: 0; color: var(--text-muted); font-size: 16px; font-weight: 700; }
+.transform-col--after .transform-list li { color: var(--text); }
+.transform-col--after .transform-list li::before { color: var(--rose); content: '✓'; font-size: 12px; left: 0; }
+
+/* ═══ PROGRAM ═══ */
+.program { padding: 40px 28px 36px; background: var(--bg-warm); position: relative; }
+.program::before { content: ''; position: absolute; top: 0; left: 28px; right: 28px; height: 1px; background: var(--line); }
+.program-eyebrow { display: inline-block; font-family: var(--font-body); font-size: 11px; font-weight: 700; color: var(--rose); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px; }
+.program-title { font-family: var(--font-display); font-size: 24px; font-weight: 500; color: var(--text); margin-bottom: 24px; letter-spacing: -0.01em; }
+.program-lessons { display: flex; flex-direction: column; gap: 8px; }
+.program-lesson { background: var(--bg); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; transition: box-shadow 0.3s ease; }
+.program-lesson:hover { box-shadow: 0 2px 12px rgba(45,34,25,0.06); }
+.program-lesson-head { display: flex; align-items: center; gap: 12px; padding: 16px 18px; cursor: pointer; user-select: none; }
+.program-num { font-family: var(--font-display); font-size: 22px; font-weight: 600; color: var(--rose); min-width: 32px; }
+.program-lesson-name { flex: 1; font-family: var(--font-body); font-size: 14px; font-weight: 500; color: var(--text); line-height: 1.35; }
+.program-chevron { font-family: var(--font-body); font-size: 20px; font-weight: 300; color: var(--text-muted); transition: transform 0.3s ease; flex-shrink: 0; }
+.program-lesson.open .program-chevron { transform: rotate(45deg); }
+.program-lesson-body { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
+.program-lesson.open .program-lesson-body { max-height: 2400px; }
+.pl-label { font-family: var(--font-body); font-size: 10px; font-weight: 700; color: var(--rose); letter-spacing: 0.15em; text-transform: uppercase; padding: 0 18px 8px 50px; }
+.pl-list { list-style: none; padding: 0 18px 16px 50px; }
+.pl-list li { font-family: var(--font-body); font-size: 13px; font-weight: 400; color: var(--text-soft); line-height: 1.65; padding: 4px 0 4px 18px; position: relative; }
+.pl-list li::before { content: ''; position: absolute; left: 0; top: 11px; width: 5px; height: 5px; border-radius: 50%; background: var(--blush); }
+.pl-result { margin: 0 18px 14px 50px; background: var(--rose-bg); border-radius: 10px; padding: 14px 16px; }
+.pl-result p { font-family: var(--font-body); font-size: 13px; font-weight: 400; color: var(--rose); line-height: 1.65; padding: 0; }
+.pl-homework { margin: 0 18px 18px 50px; background: var(--bg-warm); border-radius: 10px; padding: 14px 16px; }
+.pl-homework p { font-family: var(--font-body); font-size: 13px; font-weight: 400; color: var(--text-soft); line-height: 1.65; padding: 0; }
+.pl-note { font-family: var(--font-body); font-size: 12px; font-weight: 500; color: var(--terracotta); padding: 10px 16px; margin: 0 18px 14px 50px; border: 1px solid rgba(196,146,122,0.3); border-radius: 8px; background: rgba(196,146,122,0.06); }
+
+/* ═══ FOR WHOM ═══ */
+.whom { padding: 40px 28px 36px; background: var(--bg); position: relative; }
+.whom::before { content: ''; position: absolute; top: 0; left: 28px; right: 28px; height: 1px; background: var(--line); }
+.whom-eyebrow { display: inline-block; font-family: var(--font-body); font-size: 11px; font-weight: 700; color: var(--rose); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px; }
+.whom-title { font-family: var(--font-display); font-size: 24px; font-weight: 500; color: var(--text); margin-bottom: 20px; letter-spacing: -0.01em; }
+.whom-cards { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+.whom-card { display: flex; align-items: flex-start; gap: 12px; padding: 14px 16px; background: var(--bg-card); border: 1px solid rgba(45,34,25,0.06); border-radius: 12px; box-shadow: 0 1px 4px rgba(45,34,25,0.03); }
+.whom-check { width: 24px; height: 24px; border-radius: 8px; background: var(--rose-bg); color: var(--rose); font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+.whom-card p { font-family: var(--font-body); font-size: 14px; font-weight: 400; color: var(--text); line-height: 1.5; }
+.whom-note { font-family: var(--font-body); font-size: 13px; color: var(--text-muted); line-height: 1.6; padding: 14px 18px; background: var(--bg-warm); border-radius: 12px; }
+.whom-note strong { color: var(--text); font-weight: 600; }
+
+/* ═══ JOURNEY ═══ */
+.journey { padding: 40px 28px 36px; background: var(--bg-warm); position: relative; }
+.journey::before { content: ''; position: absolute; top: 0; left: 28px; right: 28px; height: 1px; background: var(--line); }
+.journey-eyebrow { display: inline-block; font-family: var(--font-body); font-size: 11px; font-weight: 700; color: var(--rose); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px; }
+.journey-title { font-family: var(--font-display); font-size: 24px; font-weight: 500; color: var(--text); margin-bottom: 24px; letter-spacing: -0.01em; line-height: 1.3; }
+.journey-title em { color: var(--rose); font-style: italic; }
+.journey-steps { display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px; position: relative; }
+.journey-steps::before { content: ''; position: absolute; left: 23px; top: 30px; bottom: 30px; width: 2px; background: linear-gradient(180deg, var(--rose) 0%, var(--terracotta) 100%); opacity: 0.22; border-radius: 2px; z-index: 0; }
+.journey-step { display: flex; gap: 16px; align-items: flex-start; padding: 16px 18px 18px 14px; background: var(--bg); border: 1px solid var(--line); border-radius: 14px; transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; z-index: 1; }
+.journey-step:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(155,45,63,0.08); }
+.journey-num { width: 48px; height: 48px; min-width: 48px; border-radius: 50%; background: var(--bg); border: 2px solid var(--rose); color: var(--rose); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 17px; font-style: italic; font-weight: 700; line-height: 1; flex-shrink: 0; box-shadow: 0 0 0 4px var(--bg-warm); }
+.journey-body { flex: 1; min-width: 0; padding-top: 2px; }
+.journey-day { display: inline-block; font-family: var(--font-body); font-size: 9px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--rose); background: var(--rose-bg); padding: 4px 10px; border-radius: 999px; margin-bottom: 8px; }
+.journey-step-title { font-family: var(--font-display); font-size: 17px; font-weight: 600; color: var(--text); line-height: 1.3; margin-bottom: 6px; }
+.journey-step-text { font-family: var(--font-body); font-size: 13.5px; font-weight: 400; color: var(--text-soft); line-height: 1.6; margin-bottom: 12px; }
+.journey-result { display: flex; align-items: flex-start; gap: 8px; padding: 10px 12px; background: linear-gradient(90deg, var(--rose-bg) 0%, transparent 100%); border-left: 2px solid var(--rose); border-radius: 0 8px 8px 0; }
+.journey-result-arrow { color: var(--rose); font-family: var(--font-display); font-weight: 700; flex-shrink: 0; line-height: 1.4; font-size: 15px; }
+.journey-result-text { font-family: var(--font-display); font-style: italic; font-size: 13px; color: var(--text); line-height: 1.5; font-weight: 500; }
+
+/* Final result (dark) */
+.journey-final { background: #1A1512; background-image: radial-gradient(ellipse at top right, rgba(155,45,63,0.3) 0%, transparent 60%); border-radius: 16px; padding: 32px 24px 28px; margin-top: 8px; }
+.vstack-final-result { margin-top: 0; margin-bottom: 20px; }
+.journey-final-label { font-family: var(--font-body); font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blush); margin-bottom: 14px; }
+.journey-final-title { font-family: var(--font-display); font-size: 19px; font-weight: 500; color: #fff; line-height: 1.35; margin-bottom: 20px; }
+.journey-layer { padding: 14px 0; border-top: 1px solid rgba(255,255,255,0.1); }
+.journey-layer:first-of-type { border-top: none; padding-top: 0; }
+.journey-layer-tag { font-family: var(--font-body); font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--rose-soft); margin-bottom: 6px; }
+.journey-layer-text { font-family: var(--font-body); font-size: 13.5px; font-weight: 400; color: rgba(255,255,255,0.88); line-height: 1.7; }
+.journey-layer-text em { color: var(--blush); font-style: normal; font-weight: 500; }
+
+/* ═══ GUARANTEE ═══ */
+.guarantee { padding: 40px 28px 36px; background: var(--bg); position: relative; }
+.guarantee::before { content: ''; position: absolute; top: 0; left: 28px; right: 28px; height: 1px; background: var(--line); }
+.guarantee-eyebrow { display: inline-block; font-family: var(--font-body); font-size: 11px; font-weight: 700; color: var(--rose); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px; }
+.guarantee-title { font-family: var(--font-display); font-size: 26px; font-weight: 600; color: var(--text); margin-bottom: 16px; }
+.guarantee-intro { font-family: var(--font-body); font-size: 14px; color: var(--text-soft); line-height: 1.65; margin-bottom: 24px; }
+.guarantee-intro strong { color: var(--rose); font-weight: 600; }
+.guarantee-cards { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+.guarantee-card-item { display: flex; gap: 16px; padding: 20px 18px; background: var(--bg-warm); border: 1px solid var(--line); border-radius: 14px; align-items: flex-start; }
+.guarantee-seal { width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid var(--rose); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: var(--font-display); font-size: 20px; font-weight: 600; font-style: italic; color: var(--rose); }
+.guarantee-card-body { flex: 1; }
+.guarantee-tag { display: block; font-family: var(--font-body); font-size: 10px; font-weight: 700; color: var(--rose); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 6px; }
+.guarantee-card-title { font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+.guarantee-card-body p { font-family: var(--font-body); font-size: 13px; color: var(--text-soft); line-height: 1.65; }
+.guarantee-card-body strong { color: var(--rose); font-weight: 600; }
+.guarantee-closing { text-align: center; padding-top: 20px; border-top: 1px solid var(--line); }
+.guarantee-closing-text { font-family: var(--font-display); font-style: italic; font-size: 17px; color: var(--text); line-height: 1.5; margin-bottom: 12px; }
+.guarantee-signature { font-family: var(--font-display); font-size: 20px; color: var(--rose); font-weight: 500; }
+.guarantee-signature em { font-style: italic; }
+
+/* Enhanced guarantee — accent redesign */
+.guarantee { background: linear-gradient(180deg, var(--bg) 0%, var(--bg-card) 100%); padding: 48px 28px 40px; text-align: center; }
+.guarantee-shield { position: relative; width: 76px; height: 76px; margin: 0 auto 22px; }
+.guarantee-shield-icon { position: absolute; inset: 0; border-radius: 50%; background: linear-gradient(135deg, var(--rose) 0%, var(--rose-soft) 100%); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 20px; font-style: italic; font-weight: 700; line-height: 1; box-shadow: 0 10px 28px rgba(155,45,63,0.35); z-index: 1; }
+.guarantee-shield-ring { position: absolute; inset: -10px; border: 1.5px dashed rgba(155,45,63,0.45); border-radius: 50%; animation: badgeSpin 22s linear infinite; }
+.guarantee-eyebrow { display: block; text-align: center; }
+.guarantee-title { text-align: center; font-size: 28px; }
+.guarantee-intro { text-align: center; max-width: 400px; margin: 0 auto 28px; font-size: 14.5px; }
+.guarantee-card-item { background: #fff; border: 1.5px solid rgba(155,45,63,0.2); padding: 22px 20px 22px 22px; box-shadow: 0 4px 18px rgba(155,45,63,0.07); position: relative; overflow: hidden; gap: 18px; text-align: left; }
+.guarantee-card-item::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: linear-gradient(180deg, var(--rose) 0%, var(--rose-soft) 100%); }
+.guarantee-bignum-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; min-width: 70px; padding: 4px 0; border-right: 1px solid rgba(155,45,63,0.12); padding-right: 16px; }
+.guarantee-bignum { font-family: var(--font-display); font-weight: 700; font-style: italic; color: var(--rose); line-height: 0.9; letter-spacing: -0.03em; font-size: 42px; text-align: center; }
+.guarantee-bignum em { font-size: 22px; font-style: italic; font-weight: 600; }
+.guarantee-bignum-unit { font-family: var(--font-body); font-size: 9px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rose); margin-top: 8px; text-align: center; }
+.guarantee-closing { background: var(--rose-bg); border-radius: 14px; padding: 22px 20px; text-align: center; border: 1px solid rgba(155,45,63,0.14); margin-top: 18px; border-top: 1px solid rgba(155,45,63,0.14); }
+@media (max-width: 380px) {
+  .guarantee-card-item { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .guarantee-bignum-wrap { flex-direction: row; gap: 10px; align-items: baseline; border-right: none; padding-right: 0; border-bottom: 1px solid rgba(155,45,63,0.12); padding-bottom: 10px; width: 100%; justify-content: flex-start; }
+  .guarantee-bignum-unit { margin-top: 0; }
+}
+
+/* ═══ FAQ ═══ */
+.faq { padding: 40px 28px 36px; background: var(--bg-warm); position: relative; }
+.faq::before { content: ''; position: absolute; top: 0; left: 28px; right: 28px; height: 1px; background: var(--line); }
+.faq-eyebrow { display: inline-block; font-family: var(--font-body); font-size: 11px; font-weight: 700; color: var(--rose); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px; }
+.faq-title { font-family: var(--font-display); font-size: 24px; font-weight: 500; color: var(--text); margin-bottom: 24px; }
+.faq-list { display: flex; flex-direction: column; gap: 0; margin-bottom: 24px; }
+.faq-item { border-bottom: 1px solid var(--line); overflow: hidden; }
+.faq-item:first-child { border-top: 1px solid var(--line); }
+.faq-q { display: flex; align-items: flex-start; gap: 12px; padding: 16px 0; cursor: pointer; user-select: none; }
+.faq-num { font-family: var(--font-display); font-size: 18px; font-weight: 500; font-style: italic; color: var(--rose); min-width: 28px; flex-shrink: 0; padding-top: 1px; }
+.faq-q-text { flex: 1; font-family: var(--font-display); font-size: 17px; font-weight: 500; color: var(--text); line-height: 1.35; }
+.faq-chevron { font-family: var(--font-body); font-size: 18px; font-weight: 300; color: var(--text-muted); flex-shrink: 0; transition: transform 0.3s ease; padding-top: 1px; }
+.faq-item.open .faq-chevron { transform: rotate(45deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
+.faq-item.open .faq-a { max-height: 900px; }
+.faq-a-inner { padding: 0 0 18px 40px; }
+.faq-a-inner p { font-family: var(--font-body); font-size: 13px; color: var(--text-soft); line-height: 1.75; }
+.faq-a-inner p + p { margin-top: 10px; }
+.faq-a-inner strong { color: var(--rose); font-weight: 600; }
+.faq-a-inner em { font-style: italic; color: var(--text-soft); font-weight: 500; }
+.faq-footer { font-family: var(--font-body); font-size: 13px; color: var(--text-muted); line-height: 1.6; text-align: center; }
+.faq-footer strong { color: var(--rose); font-weight: 600; }
+
+/* ═══ VALUE STACK ═══ */
+.vstack { padding: 40px 28px 36px; background: var(--bg); position: relative; }
+.vstack::before { content: ''; position: absolute; top: 0; left: 28px; right: 28px; height: 1px; background: var(--line); }
+.vstack-eyebrow { display: inline-block; font-family: var(--font-body); font-size: 11px; font-weight: 700; color: var(--rose); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px; }
+.vstack-title { font-family: var(--font-display); font-size: 24px; font-weight: 500; color: var(--text); margin-bottom: 8px; }
+.vstack-title em { color: var(--rose); font-style: italic; }
+.vstack-sub { font-family: var(--font-body); font-size: 14px; color: var(--text-muted); margin-bottom: 24px; }
+.vstack-card { background: #1A1512; border-radius: 16px; padding: 28px 22px; }
+.vstack-item { display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: flex-start; padding: 16px 0; border-bottom: 0.5px solid rgba(255,255,255,0.08); }
+.vstack-item:last-of-type { border-bottom: none; }
+.vstack-check { font-family: var(--font-display); font-size: 14px; color: #F5E1D8; width: 26px; height: 26px; display: flex; align-items: center; justify-content: center; border: 0.5px solid rgba(245,225,216,0.3); border-radius: 50%; background: rgba(245,225,216,0.06); font-style: italic; flex-shrink: 0; margin-top: 2px; }
+.vstack-bonus .vstack-check { color: #E8D5C4; border-color: rgba(232,213,196,0.25); }
+.vstack-guarantee-item .vstack-check { color: var(--rose-soft); border-color: rgba(196,70,90,0.4); background: rgba(196,70,90,0.08); }
+.vstack-item h4 { font-family: var(--font-display); font-size: 16px; font-weight: 500; color: #F5F0EA; line-height: 1.3; margin-bottom: 4px; }
+.vstack-item h4 em { color: #F5E1D8; font-style: italic; font-weight: 400; }
+.vstack-item p { font-family: var(--font-body); font-size: 12px; color: #A0917F; line-height: 1.55; }
+.vstack-tag { display: block; font-family: var(--font-body); font-size: 9px; font-weight: 700; color: var(--rose-soft); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 4px; }
+.vstack-price { font-family: var(--font-display); font-size: 15px; font-weight: 500; color: #8A7E72; text-decoration: line-through; text-decoration-color: rgba(138,126,114,0.5); white-space: nowrap; flex-shrink: 0; padding-top: 4px; font-style: italic; }
+.vstack-priceless { color: #F5E1D8 !important; text-decoration: none !important; font-style: italic; }
+.vstack-total { border-top: 0.5px solid rgba(255,255,255,0.12); margin-top: 8px; padding-top: 18px; }
+.vstack-total-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
+.vstack-total-row span { font-family: var(--font-body); font-size: 11px; font-weight: 600; color: #A0917F; letter-spacing: 0.15em; text-transform: uppercase; }
+.vstack-total-old { font-family: var(--font-display); font-size: 20px !important; font-weight: 500; color: #8A7E72; text-decoration: line-through; }
+.vstack-total-final { text-align: center; padding: 20px 0 8px; border-top: 0.5px solid rgba(155,45,63,0.4); }
+.vstack-final-label { display: block; font-family: var(--font-body); font-size: 10px; font-weight: 700; color: #F5E1D8; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 10px; }
+.vstack-final-price { display: block; font-family: var(--font-display); font-size: 72px; font-weight: 700; color: #fff; line-height: 1; letter-spacing: -0.04em; margin-bottom: 10px; }
+.vstack-final-price em { font-size: 28px; font-weight: 400; font-style: italic; color: #F5E1D8; }
+.vstack-savings { display: block; font-family: var(--font-display); font-style: italic; font-size: 15px; color: var(--rose-soft); }
+.vstack-savings strong { color: #F5E1D8; font-weight: 500; font-style: normal; }
+.vstack-spots { display: flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--font-body); font-size: 12px; color: #8A7E72; margin: 20px 0; }
+.vstack-spots strong { color: #F5E1D8; font-size: 18px; font-family: var(--font-display); font-weight: 600; }
+.vstack-spots-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--rose-soft); animation: dotPulse 2s ease-in-out infinite; }
+.vstack-cta { display: flex; align-items: center; justify-content: center; width: 100%; background: #fff; color: #1A1512; text-decoration: none; font-family: var(--font-body); font-size: 15px; font-weight: 700; padding: 20px; border-radius: 14px; margin-bottom: 14px; transition: all 0.3s ease; box-shadow: 0 6px 24px rgba(255,255,255,0.1); }
+.vstack-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(255,255,255,0.18); }
+.vstack-note { font-family: var(--font-body); font-size: 12px; color: #8A7E72; text-align: center; line-height: 1.6; }
+
+/* ═══ FINAL CTA ═══ */
+.final { padding: 40px 28px 36px; background: var(--bg); position: relative; }
+.final::before { content: ''; position: absolute; top: 0; left: 28px; right: 28px; height: 1px; background: var(--line); }
+.final-eyebrow { display: inline-block; font-family: var(--font-body); font-size: 11px; font-weight: 700; color: var(--rose); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px; }
+.final-title { font-family: var(--font-display); font-size: 24px; font-weight: 500; color: var(--text); margin-bottom: 24px; }
+.final-title em { color: var(--rose); font-style: italic; }
+.final-paths { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+.final-path { border-radius: 14px; padding: 24px 20px; }
+.final-path--dead { background: var(--bg-warm); border: 1px solid var(--line); }
+.final-path--alive { background: var(--bg-card); border: 2px solid var(--rose); box-shadow: 0 4px 20px rgba(155,45,63,0.1); }
+.final-path-tag { display: block; font-family: var(--font-body); font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px; }
+.final-path--dead .final-path-tag { color: var(--text-muted); }
+.final-path--alive .final-path-tag { color: var(--rose); }
+.final-path h3 { font-family: var(--font-display); font-size: 20px; font-weight: 600; margin-bottom: 10px; }
+.final-path--dead h3 { color: var(--text-soft); font-style: italic; }
+.final-path--alive h3 { color: var(--rose); }
+.final-path-sub { font-family: var(--font-display); font-size: 14px; font-style: italic; color: var(--text-muted); margin-bottom: 12px; }
+.final-path ul { list-style: none; padding: 0; margin: 0 0 14px; }
+.final-path li { font-family: var(--font-body); font-size: 13px; line-height: 1.55; padding: 8px 0 8px 22px; position: relative; border-bottom: 0.5px solid var(--line); }
+.final-path li:last-child { border-bottom: none; }
+.final-path--dead li { color: var(--text-muted); }
+.final-path--dead li::before { content: '×'; position: absolute; left: 0; top: 7px; color: var(--text-muted); font-size: 16px; }
+.final-path--alive li { color: var(--text); }
+.final-path--alive li::before { content: '✓'; position: absolute; left: 0; top: 7px; color: var(--rose); font-size: 13px; font-weight: 600; }
+.final-path-footer { font-family: var(--font-display); font-size: 14px; font-style: italic; padding-top: 12px; border-top: 0.5px solid var(--line); }
+.final-path--dead .final-path-footer { color: var(--text-muted); }
+.final-path--alive .final-path-footer { color: var(--rose); font-weight: 500; border-top-color: rgba(155,45,63,0.15); }
+.final-message { background: var(--rose-bg); border-radius: 14px; padding: 28px 22px; margin-bottom: 28px; border: 1px solid rgba(155,45,63,0.1); }
+.final-message p { font-family: var(--font-display); font-style: italic; font-size: 16px; color: var(--text); line-height: 1.55; margin-bottom: 14px; }
+.final-message p:last-child { margin-bottom: 0; }
+.final-message em { color: var(--rose); font-weight: 500; }
+.final-message-closing { color: var(--rose) !important; font-style: normal !important; font-weight: 600 !important; }
+.final-message-sig { font-family: var(--font-display); font-size: 22px; color: var(--rose); font-weight: 500; margin-top: 16px !important; }
+.final-cta-wrap { text-align: center; }
+.final-price { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 16px; font-family: var(--font-display); }
+.final-price span { font-size: 16px; color: var(--text-muted); }
+.final-price-old { font-style: italic; text-decoration: line-through; }
+.final-price-new { font-size: 28px !important; font-weight: 700; color: var(--rose) !important; }
+.final-cta-btn { display: flex; align-items: center; justify-content: center; width: 100%; background: var(--rose); color: #fff; text-decoration: none; font-family: var(--font-body); font-size: 16px; font-weight: 700; padding: 22px; border-radius: 16px; margin-bottom: 14px; transition: all 0.3s ease; box-shadow: 0 6px 24px rgba(155,45,63,0.3); }
+.final-cta-btn:hover { background: var(--rose-soft); transform: translateY(-2px); }
+.final-reassurance { font-family: var(--font-body); font-size: 12px; color: var(--text-muted); letter-spacing: 0.06em; }
+
+/* ═══ STICKY CTA ═══ */
+.sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; z-index: 1000; transform: translateY(100%); transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); pointer-events: none; }
+.sticky-cta.visible { transform: translateY(0); pointer-events: auto; }
+.sticky-cta-inner { max-width: 460px; margin: 0 auto; background: #1A1512; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-radius: 20px 20px 0 0; box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.15); }
+.sticky-cta-info { display: flex; flex-direction: column; gap: 6px; }
+.sticky-cta-prices { display: flex; align-items: center; gap: 10px; }
+.sticky-cta-old { font-family: var(--font-body); font-size: 13px; font-weight: 400; color: #8A7E72; text-decoration: line-through; text-decoration-color: rgba(138, 126, 114, 0.6); }
+.sticky-cta-new { font-family: var(--font-display); font-weight: 700; font-size: 22px; color: #fff; letter-spacing: -0.02em; }
+.sticky-cta-guarantee { display: flex; align-items: center; gap: 5px; font-family: var(--font-body); font-size: 11px; font-weight: 400; color: #8A7E72; }
+.sticky-cta-guarantee svg { color: var(--terracotta); flex-shrink: 0; }
+.sticky-cta-btn { display: flex; align-items: center; justify-content: center; background: var(--rose); color: #fff; text-decoration: none; font-family: var(--font-body); font-size: 15px; font-weight: 700; padding: 16px 28px; border-radius: 14px; white-space: nowrap; flex-shrink: 0; transition: background 0.3s ease, transform 0.2s ease; box-shadow: 0 4px 14px rgba(155, 45, 63, 0.3); }
+.sticky-cta-btn:hover { background: var(--rose-soft); transform: translateY(-1px); }
+.sticky-cta-btn:active { transform: translateY(0); }
+
+/* ═══ ANIMATIONS ═══ */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes badgeSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 380px) {
+  .hero { padding: 40px 22px 44px; }
+  .hero-start-badge { font-size: 12px; padding: 8px 14px; margin-bottom: 28px; }
+  .hero-hook { font-size: 28px; }
+  .hero-subtext { font-size: 15px; }
+  .hero-photo-frame { width: 50%; max-width: 190px; border-radius: 16px; }
+  .hero-photo { border-radius: 13px; }
+  .hero-card { padding: 24px 20px 20px; }
+  .hero-card-list li { font-size: 14px; padding-left: 16px; }
+  .hero-result { padding: 18px 18px; }
+  .hero-result-text { font-size: 15px; }
+  .hero-cta { font-size: 14px; padding: 20px 24px; border-radius: 14px; }
+  .hero-badge { width: 56px; height: 56px; top: -16px; right: -4px; }
+  .hero-badge-disc { font-size: 12px; inset: 4px; }
+  .hero-price-old { font-size: 16px; }
+  .hero-price-new { font-size: 26px; }
+
+  .trust-band { padding: 28px 22px 32px; }
+  .trust-band::before, .trust-band::after { width: 20px; }
+  .trust-band::before { left: 22px; }
+  .trust-band::after { right: 22px; }
+  .trust-number { font-size: 40px; }
+  .trust-max { font-size: 18px; }
+  .trust-stars { font-size: 18px; }
+  .trust-text { font-size: 14.5px; }
+
+  .bonuses { padding: 28px 22px 32px; }
+  .bonuses-title { font-size: 19px; }
+  .bonuses-timer-box { padding: 10px 18px 8px; min-width: 70px; }
+  .bonuses-timer-num { font-size: 26px; }
+  .bonuses-timer-sep { font-size: 22px; padding-bottom: 10px; }
+  .bonuses-spots { padding: 16px 12px 18px; }
+  .spots-cell { padding: 10px 10px 8px; }
+  .spots-num { font-size: 32px; }
+  .spots-label { font-size: 8.5px; letter-spacing: 0.12em; }
+  .spots-sep { font-size: 22px; padding-bottom: 14px; }
+  .spots-progress-text { font-size: 8.5px; }
+  .bonus-card { padding: 14px 14px; gap: 12px; }
+  .bonus-card-icon { width: 38px; height: 38px; border-radius: 9px; }
+  .bonus-card-title { font-size: 14px; }
+  .bonus-card-desc { font-size: 12px; }
+
+  .problem, .author, .transform, .program, .whom, .journey, .guarantee, .faq, .vstack, .final { padding: 32px 22px 28px; }
+  .problem-badge { font-size: 24px; }
+  .problem-morning-card { padding: 22px 18px; }
+  .problem-morning-card p { font-size: 13px; }
+  .problem-morning-time { font-size: 38px; }
+  .problem-quote-text { font-size: 19px; }
+  .problem-card { font-size: 13px; padding: 12px 14px; }
+  .pain-card { padding: 20px 18px 18px; }
+  .pain-title { font-size: 18px; }
+  .pain-text { font-size: 13px; }
+  .pain-tag { font-size: 9.5px; letter-spacing: 0.2em; }
+  .problem-highlight { font-size: 17px; padding: 16px 16px; }
+  .process-title { font-size: 18px; }
+  .process-step { padding: 14px 14px; gap: 12px; }
+  .process-num { font-size: 24px; min-width: 32px; }
+  .process-step p { font-size: 13px; }
+  .problem-bridge p { font-size: 18px; }
+  .transform-title { font-size: 22px; }
+  .transform-col { padding: 16px 12px; }
+  .transform-list li { font-size: 11px; }
+  .program-title { font-size: 21px; }
+  .program-lesson-name { font-size: 13px; }
+  .whom-title { font-size: 21px; }
+  .whom-card p { font-size: 13px; }
+  .journey-title { font-size: 21px; }
+  .journey-step { padding: 14px 14px; gap: 12px; }
+  .journey-num { font-size: 26px; min-width: 38px; }
+  .journey-step-title { font-size: 16px; }
+  .journey-step-text { font-size: 12.5px; }
+  .journey-final { padding: 26px 18px 24px; }
+  .journey-final-title { font-size: 17px; }
+  .journey-layer-text { font-size: 13px; }
+  .guarantee-title { font-size: 22px; }
+  .guarantee-card-item { flex-direction: column; align-items: center; text-align: center; gap: 12px; }
+  .guarantee-card-title { font-size: 16px; }
+  .faq-q-text { font-size: 15px; }
+  .faq-a-inner p { font-size: 12.5px; padding-left: 0; }
+  .faq-a-inner { padding-left: 32px; }
+  .vstack-title { font-size: 21px; }
+  .vstack-card { padding: 24px 18px; }
+  .vstack-item h4 { font-size: 14px; }
+  .vstack-final-price { font-size: 56px; }
+  .vstack-cta { font-size: 14px; padding: 18px; }
+  .final-title { font-size: 21px; }
+  .final-path h3 { font-size: 18px; }
+  .final-message p { font-size: 15px; }
+  .final-cta-btn { font-size: 14px; padding: 20px; }
+
+  .sticky-cta-inner { padding: 14px 16px; gap: 12px; }
+  .sticky-cta-new { font-size: 19px; }
+  .sticky-cta-btn { font-size: 13px; padding: 14px 22px; border-radius: 12px; }
+  .sticky-cta-guarantee { font-size: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="mobile-frame">
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero">
+
+    <div class="hero-start-badge">
+      <span class="hero-start-dot"></span>
+      <span>Старт міні-курсу «6 кроків до усвідомленого стилю» — </span>
+      <strong id="start-date"></strong>
+    </div>
+
+    <script>
+    (function(){
+      var months = ['січня','лютого','березня','квітня','травня','червня','липня','серпня','вересня','жовтня','листопада','грудня'];
+      var tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      document.getElementById('start-date').textContent = tomorrow.getDate() + ' ' + months[tomorrow.getMonth()];
+    })();
+    </script>
+
+    <h1 class="hero-hook"><span class="hero-highlight">Стиль є</span> —<br>а <span class="hero-highlight">відчуття свого</span> немає?</h1>
+
+    <p class="hero-subtext">
+      Не ще один урок стилю. А початок твоєї проявленості — всього <span class="hero-accent">6 кроків</span> до образу, який нарешті твій.
+    </p>
+
+    <div class="hero-photo-wrap hero-comparison">
+      <div class="hero-comp-item">
+        <span class="hero-comp-label hero-comp-label--before">До</span>
+        <div class="hero-comp-frame hero-comp-frame--before">
+          <img src="before.png?v=3" alt="До курсу — стрес і невпевненість">
+        </div>
+      </div>
+      <div class="hero-comp-arrow" aria-hidden="true">
+        <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 10h17M13 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="hero-comp-item">
+        <span class="hero-comp-label hero-comp-label--after">Після</span>
+        <div class="hero-comp-frame hero-comp-frame--after">
+          <img src="after.png?v=2" alt="Після курсу — впевненість і стиль">
+        </div>
+      </div>
+      <p class="hero-comp-caption">Та сама жінка — <strong>нова версія себе</strong></p>
+    </div>
+
+    <div class="hero-card">
+      <div class="hero-card-label">За 6 кроків ти:</div>
+      <ul class="hero-card-list">
+        <li><strong>Зрозумієш свою палітру</strong> — і перестанеш купувати колір, який забирає твою енергію</li>
+        <li><strong>Знайдеш свій тип фігури</strong> — одяг нарешті підкреслює тебе, а не навпаки</li>
+        <li><strong>Відкриєш свій стильовий напрямок</strong> — образ стане твоїм висловлюванням, не маскою</li>
+        <li><strong>Отримаєш формулу образів</strong> — збирайся за <em>5 хвилин</em> і виглядай як ти</li>
+      </ul>
+    </div>
+
+    <div class="hero-result">
+      <p class="hero-result-text">Нарешті впізнаєш себе в дзеркалі — і виходитимеш із дому з <strong>відчуттям себе, а не просто «нормально виглядаю»</strong>.</p>
+    </div>
+
+    <div class="hero-cta-wrap">
+      <div class="hero-price">
+        <span class="hero-price-old">$45</span>
+        <span class="hero-price-new">$12</span>
+      </div>
+
+      <div class="hero-cta-container">
+        <a href="#" class="hero-cta">Купити міні-курс за $12</a>
+        <div class="hero-badge">
+          <div class="hero-badge-ring"></div>
+          <div class="hero-badge-disc">−79%</div>
+        </div>
+      </div>
+
+      <p class="hero-price-note">Після оплати тебе буде переадресовано в Telegram-бот, де знаходиться курс</p>
+    </div>
+
+    <div class="hero-lookbook">
+      <div class="hero-lookbook-strip">
+        <div class="lookbook-tile"><img src="photo3.jpg?v=4" alt="Образ клієнтки Олесі"></div>
+        <div class="lookbook-tile"><img src="photo4.jpg?v=3" alt="Образ клієнтки Олесі"></div>
+        <div class="lookbook-tile"><img src="photo6.jpg?v=3" alt="Образ клієнтки Олесі"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══ BONUSES + TIMER ═══ -->
+  <section class="bonuses">
+
+    <div class="bonuses-header">
+      <h2 class="bonuses-title">Купуй курс до кінця таймеру та отримай <em>3 бонусні гайди</em> в подарунок, які підсилять твій результат</h2>
+    </div>
+
+    <div class="bonuses-timer-wrap">
+      <div class="bonuses-timer-box">
+        <span class="bonuses-timer-num" id="timer-min">10</span>
+        <span class="bonuses-timer-unit">хвилин</span>
+      </div>
+      <div class="bonuses-timer-sep">:</div>
+      <div class="bonuses-timer-box">
+        <span class="bonuses-timer-num" id="timer-sec">00</span>
+        <span class="bonuses-timer-unit">секунд</span>
+      </div>
+    </div>
+
+    <div class="bonuses-cards">
+
+      <div class="bonus-card">
+        <div class="bonus-card-icon"><span class="bonus-gift">🎁</span></div>
+        <div class="bonus-card-body">
+          <span class="bonus-card-tag">Бонус 1</span>
+          <p class="bonus-card-title">Гайд «Як підібрати окуляри під форму обличчя»</p>
+          <div class="bonus-card-result">
+            <span class="bonus-card-result-label">Результат</span>
+            <p class="bonus-card-result-text">Більше ніколи не купуєш окуляри навмання — знаєш точно які форми тебе підкреслюють.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bonus-card">
+        <div class="bonus-card-icon"><span class="bonus-gift">🎁</span></div>
+        <div class="bonus-card-body">
+          <span class="bonus-card-tag">Бонус 2</span>
+          <p class="bonus-card-title">Гайд «Як підбирати аксесуари під різні типи вирізів»</p>
+          <div class="bonus-card-result">
+            <span class="bonus-card-result-label">Результат</span>
+            <p class="bonus-card-result-text">Нарешті починаєш носити аксесуари — і вони дійсно завершують образ, а не виглядають випадково.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bonus-card">
+        <div class="bonus-card-icon"><span class="bonus-gift">🎁</span></div>
+        <div class="bonus-card-body">
+          <span class="bonus-card-tag">Бонус 3</span>
+          <p class="bonus-card-title">Шпаргалка «6 стильових напрямків для твого гардеробу — обери свій»</p>
+          <div class="bonus-card-result">
+            <span class="bonus-card-result-label">Результат</span>
+            <p class="bonus-card-result-text">Нарешті розумієш свій стильовий напрямок — і одягаєшся як ти, а не «як всі».</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ═══ PROBLEM ═══ -->
+  <section class="problem">
+    <div class="problem-cinema">
+      <img class="problem-cinema-img" src="photo2.jpg?v=2" alt="">
+      <div class="problem-cinema-text">
+        <h2 class="problem-cinema-title">Знайомо?</h2>
+      </div>
+    </div>
+
+    <div class="problem-morning-card">
+      <div class="problem-morning-time">7:40</div>
+      <p>Ти стоїш перед дзеркалом — вже в п'ятому варіанті вбрання за останні 20 хвилин.</p>
+      <p>Гарна блузка — але з чим її носити? Нові штани — але до них більше нічого не підходить. Сукня — куплена три місяці тому — висить із біркою.</p>
+      <p>Ти виходиш у тому, що «і так зійде». Не тому що подобається. А тому що <strong>час вийшов</strong>.</p>
+      <p class="problem-morning-end">І цей день починається з відчуття:</p>
+    </div>
+
+    <div class="problem-quote-card">
+      <span class="problem-quote-text">«знову не так, як хотілося»</span>
+    </div>
+
+    <p class="problem-also">І це не лише ранкова історія. Це ще і про:</p>
+
+    <div class="problem-pains">
+
+      <div class="pain-card">
+        <div class="pain-tag">
+          <span class="pain-tag-num">01</span>
+          <span>Хаотичні покупки — гроші на вітер</span>
+        </div>
+        <h3 class="pain-title">Купуєш речі — але <em>не розумієш куди їх носити</em></h3>
+        <p class="pain-text">Шопінг забирає час, енергію і кошти — а речі повертаються додому і висять мертвим вантажем. <strong>Ілюзія «багато одягу»</strong> — а носити насправді нічого.</p>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-tag">
+          <span class="pain-tag-num">02</span>
+          <span>Кольори, що не пасують</span>
+        </div>
+        <h3 class="pain-title">Купуєш «не свій» колір — і <em>виглядаєш втомлено</em></h3>
+        <p class="pain-text">Не знаєш які відтінки підкреслюють саме твою зовнішність. Купуєш те, що подобається на вішалці — а вдома розумієш, що <strong>воно не твоє</strong>. Колір забирає, а не підсилює.</p>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-tag">
+          <span class="pain-tag-num">03</span>
+          <span>Фасони, що не личать</span>
+        </div>
+        <h3 class="pain-title">Одяг або <em>ховає фігуру</em>, або підкреслює не те</h3>
+        <p class="pain-text">Не розумієш які фасони підходять саме твоєму типу фігури. В результаті — одяг або <strong>мішок мішком</strong>, або навпаки підкреслює те, чого хотілося б приховати.</p>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-tag">
+          <span class="pain-tag-num">04</span>
+          <span>Немає свого стилю</span>
+        </div>
+        <h3 class="pain-title">Одягаєшся як <em>«всі»</em> — без своєї індивідуальності</h3>
+        <p class="pain-text">Хочеш транслювати свою енергію і стан через образ — але не знаєш як. <strong>Немає розуміння свого стильового напрямку</strong> — і виходить «як у всіх», а не «як я».</p>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-tag">
+          <span class="pain-tag-num">05</span>
+          <span>Виглядаєш не так, як хочеться</span>
+        </div>
+        <h3 class="pain-title">Навіть з гарним одягом — <em>щось не так</em></h3>
+        <p class="pain-text">Намагаєшся, купуєш нове, дивишся Pinterest — а у дзеркалі <strong>все одно не той результат</strong>, який хотілося. Образ не збирається. Чому — незрозуміло.</p>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-tag">
+          <span class="pain-tag-num">06</span>
+          <span>Образи займають години</span>
+        </div>
+        <h3 class="pain-title">Не розумієш як зібрати стильний образ <em>за 5 хвилин</em></h3>
+        <p class="pain-text">Немає системи — немає формули. Кожен ранок як квест: що з чим поєднати, де акцент, які аксесуари. <strong>Витрачаєш час і нерви</strong> — замість того щоб просто виглядати добре.</p>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-tag">
+          <span class="pain-tag-num">07</span>
+          <span>Аксесуари — terra incognita</span>
+        </div>
+        <h3 class="pain-title">Стрес при виборі одягу — і <em>аксесуари взагалі не носиш</em></h3>
+        <p class="pain-text">Не знаєш як і з чим їх поєднувати — тому просто не носиш. А без аксесуарів образ залишається <strong>незавершеним і простим</strong>. Щоранку — стрес замість задоволення.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ═══ FOR WHOM ═══ -->
+  <section class="whom">
+    <p class="whom-author-label">Авторка курсу — <strong>Олеся Beno</strong></p>
+    <div class="whom-header-photo">
+      <img src="photo1.jpg?v=3" alt="">
+    </div>
+    <span class="whom-eyebrow">Для кого</span>
+    <h2 class="whom-title">Цей курс для тебе, якщо:</h2>
+
+    <div class="whom-cards">
+      <div class="whom-card"><span class="whom-check">✓</span><p>Відчуваєш що стиль є — але він не твій. Щось завжди не так, і не знаєш що саме.</p></div>
+      <div class="whom-card"><span class="whom-check">✓</span><p>Ховаєшся за «безпечним» образом — чорне, базове, непомітне. Бо страшно виділятися.</p></div>
+      <div class="whom-card"><span class="whom-check">✓</span><p>Хочеш щоб образ відповідав твоєму рівню — стану, енергії, тій жінці яка ти є зсередини.</p></div>
+      <div class="whom-card"><span class="whom-check">✓</span><p>Дивишся в дзеркало і хочеш нарешті впізнати себе — не «нормально», а «це я».</p></div>
+      <div class="whom-card"><span class="whom-check">✓</span><p>Хочеш виражати себе через одяг — але не знаєш як, і виходить «як всі».</p></div>
+      <div class="whom-card"><span class="whom-check">✓</span><p>Готова зробити перший крок до стилю який справді твій — без дорогих шопінгів і стилістів.</p></div>
+    </div>
+
+    <div class="whom-note">
+      Неважливо де ти зараз — мама в декреті, підприємиця чи найманий працівник. <strong>Якщо ти жінка, яка хоче нарешті проявити себе через образ — цей курс для тебе.</strong>
+    </div>
+  </section>
+
+  <!-- ═══ PROGRAM ═══ -->
+  <section class="program">
+    <span class="program-eyebrow">Програма</span>
+    <h2 class="program-title">6 кроків — від хаосу до свого стилю</h2>
+
+    <div class="program-lessons">
+
+      <div class="program-lesson" onclick="this.classList.toggle('open')">
+        <div class="program-lesson-head"><span class="program-num">00</span><span class="program-lesson-name">Вступ · Знайомство</span><span class="program-chevron">+</span></div>
+        <div class="program-lesson-body">
+          <p class="pl-label">Про що крок</p>
+          <ul class="pl-list">
+            <li>Чому стиль — це не про одяг, а про розуміння себе</li>
+            <li>Як пов'язані внутрішній стан і зовнішній образ</li>
+            <li>Що таке «свій стиль» і як він відрізняється від «модного»</li>
+          </ul>
+          <p class="pl-label">Результат</p>
+          <div class="pl-result"><p>Зрозумієш чому досі не вдавалося знайти свій стиль — і отримаєш чіткий план із 6 наступних кроків.</p></div>
+        </div>
+      </div>
+
+      <div class="program-lesson" onclick="this.classList.toggle('open')">
+        <div class="program-lesson-head"><span class="program-num">01</span><span class="program-lesson-name">Крок 1 · Твій запит</span><span class="program-chevron">+</span></div>
+        <div class="program-lesson-body">
+          <p class="pl-label">Про що крок</p>
+          <ul class="pl-list">
+            <li>Що ти хочеш змінити у своєму образі — і чому це важливо саме зараз</li>
+            <li>Як визначити свої стильові цілі</li>
+            <li>Аналіз поточного гардеробу: що працює, що ні</li>
+          </ul>
+          <p class="pl-label">Результат</p>
+          <div class="pl-result"><p>Чітко розумієш що саме потрібно змінити і куди рухатися. Більше не «щось не так» — є конкретний запит.</p></div>
+          <p class="pl-label">Домашнє завдання</p>
+          <div class="pl-homework"><p>Практичне завдання з аналізу свого стильового запиту.</p></div>
+        </div>
+      </div>
+
+      <div class="program-lesson" onclick="this.classList.toggle('open')">
+        <div class="program-lesson-head"><span class="program-num">02</span><span class="program-lesson-name">Крок 2 · Твоя палітра кольору</span><span class="program-chevron">+</span></div>
+        <div class="program-lesson-body">
+          <p class="pl-label">Про що крок</p>
+          <ul class="pl-list">
+            <li>4 кольоротипи — характеристики і відмінності</li>
+            <li>Як визначити свій кольоротип</li>
+            <li>Яка палітра підсилює твою зовнішність, а яка забирає енергію</li>
+            <li>Як використовувати свій колір у гардеробі</li>
+          </ul>
+          <p class="pl-label">Результат</p>
+          <div class="pl-result"><p>Знаєш свою кольорову палітру. Більше не купуєш «не своє» — обираєш тільки те, що дійсно тебе підкреслює.</p></div>
+          <p class="pl-label">Домашнє завдання</p>
+          <div class="pl-homework"><p>Визначити свій кольоротип і переглянути гардероб через призму кольору.</p></div>
+        </div>
+      </div>
+
+      <div class="program-lesson" onclick="this.classList.toggle('open')">
+        <div class="program-lesson-head"><span class="program-num">03</span><span class="program-lesson-name">Крок 3 · Твоя фігура</span><span class="program-chevron">+</span></div>
+        <div class="program-lesson-body">
+          <p class="pl-label">Про що крок</p>
+          <ul class="pl-list">
+            <li>Як правильно виміряти параметри фігури</li>
+            <li>Типи фігур і їх особливості</li>
+            <li>Які фасони підкреслюють переваги кожного типу</li>
+            <li>Що уникати — і чому</li>
+          </ul>
+          <p class="pl-label">Результат</p>
+          <div class="pl-result"><p>Знаєш свій тип фігури і розумієш які крої та силуети тебе підкреслюють. Одяг нарешті сидить так як треба.</p></div>
+          <p class="pl-label">Домашнє завдання</p>
+          <div class="pl-homework"><p>Виміряти параметри, визначити тип фігури і проаналізувати свій гардероб.</p></div>
+        </div>
+      </div>
+
+      <div class="program-lesson" onclick="this.classList.toggle('open')">
+        <div class="program-lesson-head"><span class="program-num">04</span><span class="program-lesson-name">Крок 4 · Твої напрямки стилю</span><span class="program-chevron">+</span></div>
+        <div class="program-lesson-body">
+          <p class="pl-label">Про що крок</p>
+          <ul class="pl-list">
+            <li>6 основних стильових напрямків — естетика, характер, кольори, фактури</li>
+            <li>Як знайти свій стильовий напрямок — або поєднання кількох</li>
+            <li>Стиль як внутрішня мова — як виражати себе через образ</li>
+          </ul>
+          <p class="pl-label">Результат</p>
+          <div class="pl-result"><p>Розумієш свій стильовий напрямок і більше не одягаєшся «як всі». Маєш свою естетику і вмієш транслювати свою енергію через образ.</p></div>
+          <p class="pl-label">Домашнє завдання</p>
+          <div class="pl-homework"><p>Визначити свій стильовий напрямок і зібрати мудборд образів.</p></div>
+        </div>
+      </div>
+
+      <div class="program-lesson" onclick="this.classList.toggle('open')">
+        <div class="program-lesson-head"><span class="program-num">05</span><span class="program-lesson-name">Крок 5 · Твої аксесуари</span><span class="program-chevron">+</span></div>
+        <div class="program-lesson-body">
+          <p class="pl-label">Про що крок</p>
+          <ul class="pl-list">
+            <li>Аксесуар — фінальна точка образу, що все змінює</li>
+            <li>Правило пропорції: як підбирати розмір аксесуарів під свою зовнішність</li>
+            <li>Як підбирати прикраси під різні типи вирізів</li>
+            <li>Сумка, ремінь, шарф, окуляри — правила вибору</li>
+          </ul>
+          <p class="pl-label">Результат</p>
+          <div class="pl-result"><p>Нарешті починаєш носити аксесуари — і вони завершують образ, а не виглядають випадково. Знаєш правила поєднання і більше не боїшся аксесуарів.</p></div>
+          <p class="pl-label">Домашнє завдання</p>
+          <div class="pl-homework"><p>Переглянути свої аксесуари, скласти 3 образи з різними акцентами.</p></div>
+        </div>
+      </div>
+
+      <div class="program-lesson" onclick="this.classList.toggle('open')">
+        <div class="program-lesson-head"><span class="program-num">06</span><span class="program-lesson-name">Крок 6 · Твоя формула образів</span><span class="program-chevron">+</span></div>
+        <div class="program-lesson-body">
+          <p class="pl-label">Про що крок</p>
+          <ul class="pl-list">
+            <li>Головна формула: 1 акцент + база + шари = стильний образ</li>
+            <li>Техніка Layering — один одяг дає кілька різних образів</li>
+            <li>Як збирати образи за 5 хвилин без довгих роздумів</li>
+            <li>Готові формули для різних ситуацій: офіс, кежуал, вечір</li>
+          </ul>
+          <p class="pl-label">Результат</p>
+          <div class="pl-result"><p>Маєш просту систему для щоденних образів. Збираєшся стильно за 5 хвилин — без стресу і без питання «що вдягнути?»</p></div>
+          <p class="pl-label">Домашнє завдання</p>
+          <div class="pl-homework"><p>Скласти 5 образів за авторською формулою і сфотографувати — це твоя шпаргалка.</p></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="program-photo-accent">
+      <img src="photo5.jpg?v=4" alt="">
+    </div>
+  </section>
+
+  <!-- ═══ JOURNEY ═══ -->
+  <section class="journey">
+    <span class="journey-eyebrow">Твій шлях</span>
+    <h2 class="journey-title">Як ти зміниш своє відношення до стилю <em>від кроку до кроку</em></h2>
+
+    <div class="journey-steps">
+
+      <div class="journey-step">
+        <span class="journey-num">01</span>
+        <div class="journey-body">
+          <span class="journey-day">Крок 1</span>
+          <p class="journey-step-title">Зрозумієш що саме хочеш змінити</p>
+          <p class="journey-step-text">Сформулюєш свій стильовий запит — і нарешті матимеш відповідь на «що саме не так» у своєму образі.</p>
+          <div class="journey-result">
+            <span class="journey-result-arrow">→</span>
+            <span class="journey-result-text">Чіткий напрямок замість розмитого «хочу краще виглядати».</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="journey-step">
+        <span class="journey-num">02</span>
+        <div class="journey-body">
+          <span class="journey-day">Крок 2</span>
+          <p class="journey-step-title">Відкриєш свою кольорову палітру</p>
+          <p class="journey-step-text">Дізнаєшся які кольори підсилюють саме твою зовнішність. Більше ніяких «не свої» покупок.</p>
+          <div class="journey-result">
+            <span class="journey-result-arrow">→</span>
+            <span class="journey-result-text">Купуєш тільки «своє» — і виглядаєш свіжо і яскраво.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="journey-step">
+        <span class="journey-num">03</span>
+        <div class="journey-body">
+          <span class="journey-day">Крок 3</span>
+          <p class="journey-step-title">Зрозумієш свою фігуру і що їй личить</p>
+          <p class="journey-step-text">Знатимеш які фасони підкреслюють переваги і стануть твоїми найкращими союзниками.</p>
+          <div class="journey-result">
+            <span class="journey-result-arrow">→</span>
+            <span class="journey-result-text">Одяг нарешті сидить так, як ти завжди хотіла.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="journey-step">
+        <span class="journey-num">04</span>
+        <div class="journey-body">
+          <span class="journey-day">Крок 4</span>
+          <p class="journey-step-title">Знайдеш свій стильовий напрямок</p>
+          <p class="journey-step-text">Перестанеш одягатися «як всі» — знайдеш свою естетику і почнеш транслювати свою енергію через образ.</p>
+          <div class="journey-result">
+            <span class="journey-result-arrow">→</span>
+            <span class="journey-result-text">Свій стиль, своя енергія — впізнавана і цілісна.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="journey-step">
+        <span class="journey-num">05</span>
+        <div class="journey-body">
+          <span class="journey-day">Крок 5</span>
+          <p class="journey-step-title">Почнеш носити аксесуари з впевненістю</p>
+          <p class="journey-step-text">Дізнаєшся правила поєднання і нарешті перестанеш боятися аксесуарів. Вони стануть твоїм інструментом стилю.</p>
+          <div class="journey-result">
+            <span class="journey-result-arrow">→</span>
+            <span class="journey-result-text">Кожен образ стає завершеним і виразним.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="journey-step">
+        <span class="journey-num">06</span>
+        <div class="journey-body">
+          <span class="journey-day">Крок 6</span>
+          <p class="journey-step-title">Збираєшся стильно за 5 хвилин</p>
+          <p class="journey-step-text">Маєш просту формулу образів. Більше ніякого ранкового стресу — тільки задоволення від того, як виглядаєш.</p>
+          <div class="journey-result">
+            <span class="journey-result-arrow">→</span>
+            <span class="journey-result-text">Нова версія себе — щодня, легко і з задоволенням.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ═══ TRANSFORMATION ═══ -->
+  <section class="transform">
+    <span class="transform-eyebrow">Результат курсу</span>
+    <h2 class="transform-title">Твій образ <em>до</em> і <em>після</em> курсу</h2>
+
+    <div class="transform-grid">
+      <div class="transform-col transform-col--before">
+        <span class="transform-label transform-label--before">До</span>
+        <div class="transform-photo">
+          <img src="before.png?v=3" alt="До курсу — невпевненість у стилі">
+        </div>
+        <ul class="transform-list">
+          <li>Ховаєшся за безпечним образом</li>
+          <li>«Не своє» у дзеркалі</li>
+          <li>Стрес і хаос щоранку</li>
+          <li>Образ не відповідає твоєму рівню</li>
+        </ul>
+      </div>
+
+      <div class="transform-arrow">→</div>
+
+      <div class="transform-col transform-col--after">
+        <span class="transform-label transform-label--after">Після</span>
+        <div class="transform-photo transform-photo--after">
+          <img src="after.png?v=2" alt="Після курсу — впевненість і стиль">
+        </div>
+        <ul class="transform-list">
+          <li>Впізнаєш себе в дзеркалі</li>
+          <li>Образ — твоє висловлювання</li>
+          <li>5 хвилин і ти готова</li>
+          <li>Є своя енергія і проявленість</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AUTHOR ═══ -->
+  <section class="author">
+    <span class="author-eyebrow">Про авторку курсу</span>
+
+    <div class="author-photo-wrap">
+      <div class="author-photo-frame">
+        <img src="author.jpg?v=4" alt="Олеся Беньо — персональна стилістка">
+      </div>
+    </div>
+
+    <h2 class="author-name">Олеся Beno</h2>
+    <p class="author-title">Персональна стилістка · Імідж-дизайнерка</p>
+
+    <blockquote class="author-quote">«Стиль — це не те, що ти вдягаєш. Це те, що ти транслюєш. І в кожній жінці вже закладений свій унікальний стиль — потрібно лише дозволити собі його проявити».</blockquote>
+
+    <div class="author-stats">
+      <div class="author-stat"><span class="author-stat-num">10+</span><span class="author-stat-label">років досвіду</span></div>
+      <div class="author-stat"><span class="author-stat-num">2013</span><span class="author-stat-label">старт у стилі</span></div>
+      <div class="author-stat"><span class="author-stat-num">500+</span><span class="author-stat-label">клієнток</span></div>
+    </div>
+
+    <div class="author-text">
+      <p>Я персональна стилістка та імідж-дизайнерка. За <strong>10+ років роботи</strong> я пройшла сотні трансформацій разом із клієнтками — і кожного разу переконуюся в одному: свій стиль уже є в кожній жінці. У її рисах, характері, енергії та способі жити.</p>
+      <p>Його не потрібно вигадувати або копіювати. <strong>Його потрібно дозволити собі проявити.</strong></p>
+      <p>З 2013 року — персональні клієнти, лекції та тренінги, зйомки реклами і кіно. За цей час я навчилася одному: <strong>стиль змінює не гардероб — він змінює те, як жінка себе відчуває.</strong></p>
+    </div>
+  </section>
+
+  <!-- ═══ GUARANTEE ═══ -->
+  <section class="guarantee">
+    <div class="guarantee-shield">
+      <div class="guarantee-shield-ring"></div>
+      <div class="guarantee-shield-icon">100%</div>
+    </div>
+    <span class="guarantee-eyebrow">Без ризику для тебе</span>
+    <h2 class="guarantee-title">Подвійна гарантія <em style="color:var(--rose);font-style:italic;">Beno</em></h2>
+    <p class="guarantee-intro">Ти вже пробувала щось подібне раніше — і не спрацювало. Я це розумію. <strong>Тому ризик беру повністю на себе.</strong></p>
+
+    <div class="guarantee-cards">
+      <div class="guarantee-card-item">
+        <div class="guarantee-bignum-wrap">
+          <span class="guarantee-bignum">14</span>
+          <span class="guarantee-bignum-unit">днів</span>
+        </div>
+        <div class="guarantee-card-body">
+          <span class="guarantee-tag">Рівень 1 · Без умов</span>
+          <h3 class="guarantee-card-title">Повернення коштів — без питань</h3>
+          <p>Якщо протягом <strong>14 днів</strong> після покупки вирішиш, що курс не підходить — напиши нам, і я поверну <strong>100% вартості</strong>. Без пояснень.</p>
+        </div>
+      </div>
+      <div class="guarantee-card-item">
+        <div class="guarantee-bignum-wrap">
+          <span class="guarantee-bignum">100<em>%</em></span>
+          <span class="guarantee-bignum-unit">результату</span>
+        </div>
+        <div class="guarantee-card-body">
+          <span class="guarantee-tag">Рівень 2 · Гарантія результату</span>
+          <h3 class="guarantee-card-title">Не отримала результат — повертаю гроші</h3>
+          <p>Пройдеш усі 6 кроків, виконаєш домашні завдання — і не отримаєш результату? <strong>Напиши мені особисто.</strong> Повертаю повну суму.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="guarantee-closing">
+      <p class="guarantee-closing-text">Ризик повністю на мені.<br>Тобі залишається тільки прийти і зробити.</p>
+      <p class="guarantee-signature">— <em>Олеся Beno</em></p>
+    </div>
+  </section>
+
+  <!-- ═══ VALUE STACK ═══ -->
+  <section class="vstack">
+    <span class="vstack-eyebrow">Що ти отримаєш</span>
+    <h2 class="vstack-title">Фінальна <em>пропозиція</em></h2>
+    <p class="vstack-sub">Повний набір курсу, бонусів і гарантій</p>
+
+    <div class="journey-final vstack-final-result">
+      <p class="journey-final-label">Фінальний результат</p>
+      <p class="journey-final-title">Що ти отримаєш після проходження курсу «6 кроків до усвідомленого стилю»</p>
+
+      <div class="journey-layer">
+        <p class="journey-layer-tag">— Розуміння себе</p>
+        <p class="journey-layer-text">Ти знаєш свій кольоротип, тип фігури і стильовий напрямок. Більше жодних «не своїх» покупок і образів «як у всіх».</p>
+      </div>
+
+      <div class="journey-layer">
+        <p class="journey-layer-tag">— Щоденне життя</p>
+        <p class="journey-layer-text">Збираєшся за 5 хвилин замість 40. Маєш формулу образів і вмієш носити аксесуари. Кожен вихід з дому — з задоволенням.</p>
+      </div>
+
+      <div class="journey-layer">
+        <p class="journey-layer-tag">— Відчуття</p>
+        <p class="journey-layer-text">Дивишся в дзеркало і впізнаєш себе. Не тому що купила нове — а тому що нарешті розумієш свій стиль. Ця впевненість — найцінніше, що ти винесеш з курсу.</p>
+      </div>
+    </div>
+
+    <div class="vstack-card">
+
+      <div class="vstack-item">
+        <span class="vstack-check">✓</span>
+        <div>
+          <h4>6 кроків міні-курсу «6 кроків до усвідомленого стилю»</h4>
+          <p>Повна авторська методологія від Олесі Beno</p>
+        </div>
+        <span class="vstack-price">$45</span>
+      </div>
+
+      <div class="vstack-item">
+        <span class="vstack-check">✓</span>
+        <div>
+          <h4>Доступ до Telegram-бота назавжди</h4>
+          <p>Усі кроки залишаються у тебе — повертайся коли завгодно</p>
+        </div>
+        <span class="vstack-price">$12</span>
+      </div>
+
+      <div class="vstack-item">
+        <span class="vstack-check">✓</span>
+        <div>
+          <h4>Особиста підтримка під час проходження</h4>
+          <p>Відповіді на твої запитання прямо в боті</p>
+        </div>
+        <span class="vstack-price">$24</span>
+      </div>
+
+      <div class="vstack-item vstack-bonus">
+        <span class="vstack-check">✓</span>
+        <div>
+          <span class="vstack-tag">Бонус 1</span>
+          <h4>Гайд <em>«Як підібрати окуляри під форму обличчя»</em></h4>
+          <p>PDF-довідник на все життя</p>
+        </div>
+        <span class="vstack-price">$7</span>
+      </div>
+
+      <div class="vstack-item vstack-bonus">
+        <span class="vstack-check">✓</span>
+        <div>
+          <span class="vstack-tag">Бонус 2</span>
+          <h4>Гайд <em>«Аксесуари під різні типи вирізів»</em></h4>
+          <p>Від стилістки — одразу в практику</p>
+        </div>
+        <span class="vstack-price">$9</span>
+      </div>
+
+      <div class="vstack-item vstack-bonus">
+        <span class="vstack-check">✓</span>
+        <div>
+          <span class="vstack-tag">Бонус 3</span>
+          <h4>Шпаргалка <em>«6 стильових напрямків для твого гардеробу»</em></h4>
+          <p>Обери свій — і одягайся як ти</p>
+        </div>
+        <span class="vstack-price">$6</span>
+      </div>
+
+      <div class="vstack-item vstack-guarantee-item">
+        <span class="vstack-check">✓</span>
+        <div>
+          <h4>Подвійна гарантія Beno</h4>
+          <p>14 днів без умов + гарантія результату</p>
+        </div>
+        <span class="vstack-price vstack-priceless">Безцінно</span>
+      </div>
+
+      <div class="vstack-total">
+        <div class="vstack-total-row">
+          <span>Загальна вартість</span>
+          <span class="vstack-total-old">$103</span>
+        </div>
+        <div class="vstack-total-final">
+          <span class="vstack-final-label">Сьогодні — все разом</span>
+          <span class="vstack-final-price">$12</span>
+          <span class="vstack-savings">Економія <strong>$91</strong> · <strong>−91%</strong></span>
+        </div>
+      </div>
+
+      <div class="vstack-cta-wrap">
+        <a href="#" class="vstack-cta">Купити міні-курс за $12</a>
+        <p class="vstack-cta-guarantee">14 днів гарантія · Доступ назавжди · Без підписок</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="faq">
+    <span class="faq-eyebrow">Запитання</span>
+    <h2 class="faq-title">Часті запитання</h2>
+
+    <div class="faq-list">
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q"><span class="faq-num">01</span><span class="faq-q-text">Як я отримую доступ до курсу після оплати?</span><span class="faq-chevron">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>Одразу після оплати ти отримаєш посилання на <strong>Telegram-бот курсу</strong>. Перший крок буде вже чекати там — можеш починати цього ж дня.</p>
+          <p>Далі новий крок приходить у бот <strong>щодня о 10:00 ранку</strong>. Нічого встановлювати не потрібно — Telegram у тебе вже є.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q"><span class="faq-num">02</span><span class="faq-q-text">Чи підійде мені курс, якщо я не розбираюся в моді?</span><span class="faq-chevron">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p><strong>Так, і особливо для тебе.</strong> Курс не про моду — а про твій особистий стиль. Ти не вчиш «що модно цього сезону», а дізнаєшся що підходить саме тобі.</p>
+          <p>Ніяких складних теорій — все просто, практично і одразу застосовується до твого гардеробу.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q"><span class="faq-num">03</span><span class="faq-q-text">Скільки часу займає один крок разом з домашнім завданням?</span><span class="faq-chevron">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>Сам урок — <strong>7–12 хвилин</strong> залежно від теми. Домашнє завдання зазвичай на <strong>10–15 хвилин</strong>.</p>
+          <p>Разом — близько <em>30 хвилин на день</em>. Розподіляй як тобі зручно: зранку, увечері або на вихідних.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q"><span class="faq-num">04</span><span class="faq-q-text">Чи зберігається доступ до курсу назавжди?</span><span class="faq-chevron">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p><strong>Так.</strong> Доступ до Telegram-бота зі всіма кроками і бонусами залишається у тебе <em>назавжди</em>.</p>
+          <p>Можеш повертатися до будь-якого кроку — перед шопінгом, перед важливою подією або просто для нагадування. Усі матеріали завжди під рукою.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q"><span class="faq-num">05</span><span class="faq-q-text">Чи працює метод для будь-якої фігури та розміру?</span><span class="faq-chevron">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p><strong>Так.</strong> Курс не про «ідеальну фігуру». Він про те, як одягатись так, щоб підкреслити саме твої риси і твою жіночність.</p>
+          <p>«Не буває некрасивих людей — є лише навʼязані шаблони.» Курс працює для жінок будь-якого розміру і віку.</p>
+        </div></div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-q"><span class="faq-num">06</span><span class="faq-q-text">Чому курс коштує лише $12?</span><span class="faq-chevron">+</span></div>
+        <div class="faq-a"><div class="faq-a-inner">
+          <p>Тому що це <strong>міні-курс</strong> — компактний, практичний і без води. Ми свідомо зробили ціну доступною, щоб якомога більше жінок отримали ці інструменти.</p>
+          <p>Цей курс містить ту саму систему — у форматі самостійного навчання. А ще — за $12 ти фактично ризикуєш нічим: є гарантія повернення.</p>
+        </div></div>
+      </div>
+
+    </div>
+
+    <p class="faq-footer">Залишилося ще одне питання?<br>Напиши нам у Telegram — <strong>відповімо особисто.</strong></p>
+  </section>
+
+  <!-- ═══ FINAL CTA ═══ -->
+  <section class="final">
+    <span class="final-eyebrow">Останній крок</span>
+    <h2 class="final-title">Зараз ти на <em>роздоріжжі</em></h2>
+
+    <div class="final-paths">
+      <div class="final-path final-path--dead">
+        <span class="final-path-tag">Шлях 1 · Нічого не міняти</span>
+        <h3>«Якось розберуся сама»</h3>
+        <p class="final-path-sub">Через 3 місяці:</p>
+        <ul>
+          <li>Щоранку той самий стрес перед шафою</li>
+          <li>Нові покупки — знову «не те». Гроші — на вітер</li>
+          <li>Все та ж невпевненість у своєму образі</li>
+          <li>Стиль так і залишається «як у всіх»</li>
+        </ul>
+        <p class="final-path-footer">Той самий «день бабака» — просто ще на 3 місяці довше</p>
+      </div>
+
+      <div class="final-path final-path--alive">
+        <span class="final-path-tag">Шлях 2 · Знайти свій стиль</span>
+        <h3>6 кроків із Олесею</h3>
+        <p class="final-path-sub">Через тиждень:</p>
+        <ul>
+          <li>Знаєш свій колір, фігуру і стильовий напрямок</li>
+          <li>Збираєш образи за 5 хвилин — без стресу</li>
+          <li>Носиш аксесуари і вони завершують образ</li>
+          <li>Дивишся в дзеркало — і нарешті впізнаєш себе</li>
+        </ul>
+        <p class="final-path-footer">Нова версія себе — і це назавжди</p>
+      </div>
+    </div>
+
+    <div class="final-message">
+      <p>Я знаю як це — дивитися в дзеркало і відчувати що щось не так. Навіть коли одяг гарний. <em>Бо справа не в одязі — а в розумінні себе.</em></p>
+      <p>Цей курс — це система, яку я шліфувала 10 років з сотнями клієнток.</p>
+      <p>Зараз — <em>вперше</em> — я упакувала її в 6 простих кроків за $12. Щоб кожна жінка могла дозволити собі свій стиль.</p>
+      <p class="final-message-closing">Я чекаю тебе в боті вже завтра о 10:00.</p>
+      <p class="final-message-sig">— Олеся Beno</p>
+    </div>
+
+    <div class="final-cta-wrap">
+      <div class="final-price">
+        <span class="final-price-old">$45</span>
+        <span>→</span>
+        <span class="final-price-new">$12</span>
+      </div>
+      <a href="#" class="final-cta-btn">Забрати міні-курс за $12 →</a>
+      <p class="final-reassurance">14 днів гарантія · Доступ назавжди · Без підписок</p>
+    </div>
+  </section>
+
+<!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer">
+    <div class="footer-fops">
+      <div class="footer-fop">
+        <p class="footer-fop-name">Беньо Олеся Ярославівна ФОП</p>
+        <p class="footer-fop-line">ЄДРПОУ — буде додано після реєстрації</p>
+      </div>
+    </div>
+
+    <div class="footer-disclaimer">
+      <p>IMPORTANT: Do not enter your name and email until you have read the Legal Disclaimer. The use of our site is subject to our Terms and Conditions. In addition, this page and our site make no guarantees and will not make any guarantees about your ability to generate results with your ideas, information, tools and resources, or strategies. You should know that all products and services by our company are for educational and informational purposes only. Nothing on this website, or any of our content or curriculum, is a promise, implication, or guarantee of results. Use caution and always consult your accountant, lawyer or professional adviser before acting on this or any information related to a lifestyle change or your business and finances. You alone are responsible and accountable for your decisions, actions and results in life, and by your registration here you agree not to attempt to hold us liable for your decisions, actions or results, at any time, under any circumstance.</p>
+
+      <p>ВАЖЛИВО: не вводьте своє ім’я та контактну інформацію, доки не прочитаєте Правове Повідомлення. Використання нашого сайту регулюється нашими Умовами та положеннями. На цій сторінці та нашому сайті не надається жодних гарантій щодо вашої здатності досягти результатів з вашими ідеями, інформацією, інструментами, ресурсами чи стратегіями. Усі продукти та послуги нашої компанії призначені виключно для освітніх та інформаційних цілей. Ніщо на цьому сайті або в будь-якому нашому навчальному матеріалі не є обіцянкою чи гарантією результатів. Будьте обережні та радьтеся зі своїм бухгалтером, юристом або професійним консультантом перед тим, як діяти на основі цієї або будь-якої іншої інформації, що стосується зміни способу життя, вашого бізнесу чи фінансів. Ви самостійно несете відповідальність за свої рішення, дії та результати. Реєструючись на цьому сайті, ви погоджуєтеся не намагатися притягти нас до відповідальності за ваші рішення, дії чи результати за будь-яких обставин.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="shop.html">🛍 Всі продукти — магазин</a>
+      <a href="privacy.html">Політика конфіденційності</a>
+      <a href="offer.html">Публічна оферта</a>
+    </div>
+
+    <p class="footer-copy">© 2026 Олеся Beno · Усі права захищено</p>
+  </footer>
+
+</div><!-- /.mobile-frame -->
+
+<!-- ═══ STICKY CTA ═══ -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-cta-inner">
+    <div class="sticky-cta-info">
+      <div class="sticky-cta-prices">
+        <span class="sticky-cta-old">$45</span>
+        <span class="sticky-cta-new">$12</span>
+      </div>
+      <div class="sticky-cta-guarantee">
+        <svg width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 1L1 2.5V6C1 8.5 3 10.5 5.5 11C8 10.5 10 8.5 10 6V2.5L5.5 1Z" stroke="currentColor" stroke-width="0.8" stroke-linejoin="round" fill="none"/><path d="M3.5 6L5 7.5L7.5 4.5" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>14 днів гарантія</span>
+      </div>
+    </div>
+    <a href="#" class="sticky-cta-btn">Купити →</a>
+  </div>
+</div>
+
+<script>
+/* ═══ COUNTDOWN TIMER — 10:00 loop ═══ */
+(function(){
+  var minEl = document.getElementById('timer-min');
+  var secEl = document.getElementById('timer-sec');
+  if (!minEl || !secEl) return;
+
+  var total = 10 * 60;
+  function tick(){
+    var m = Math.floor(total / 60);
+    var s = total % 60;
+    minEl.textContent = m < 10 ? '0' + m : m;
+    secEl.textContent = s < 10 ? '0' + s : s;
+    if (total <= 0) { total = 10 * 60; return; }
+    total--;
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+
+/* ═══ STICKY CTA — show after scrolling past bonuses ═══ */
+(function(){
+  var sticky = document.getElementById('stickyCta');
+  var bonuses = document.querySelector('.bonuses');
+  if (!sticky || !bonuses) return;
+
+  function checkScroll(){
+    var rect = bonuses.getBoundingClientRect();
+    if (rect.bottom < 0) sticky.classList.add('visible');
+    else sticky.classList.remove('visible');
+  }
+  window.addEventListener('scroll', checkScroll, { passive: true });
+  checkScroll();
+})();
+
+/* ═══ LIVE SPOTS COUNTER — persistent, decrements with realistic intervals ═══ */
+(function(){
+  var els = document.querySelectorAll('[data-spots-count]');
+  var progressBar = document.getElementById('spots-progress');
+  var takenText = document.getElementById('spots-taken-text');
+  if (!els.length) return;
+
+  var STORAGE_KEY = 'spots_counter_v1';
+  var START = 98;
+  var MIN_SPOTS = 7;
+  var MAX_TOTAL = 100;
+
+  var now = Date.now();
+  var data;
+  try { data = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null'); } catch(e) { data = null; }
+
+  if (!data || typeof data.count !== 'number' || data.count < MIN_SPOTS || data.count > START) {
+    data = { count: START, lastTick: now, lastVisit: now };
+  }
+
+  // Simulate "other people buying" during gap between visits
+  var gap = now - (data.lastVisit || now);
+  var THIRTY_MIN = 30 * 60 * 1000;
+  if (gap > THIRTY_MIN) {
+    var gapMinutes = gap / (60 * 1000);
+    var estimatedBuys = Math.floor(gapMinutes / 7); // ~1 buy per 7 min
+    if (estimatedBuys > 0) {
+      data.count = Math.max(MIN_SPOTS, data.count - estimatedBuys);
+      data.lastTick = now;
+    }
+  }
+
+  function render(animate){
+    els.forEach(function(el){
+      el.textContent = data.count;
+      if (animate) {
+        el.classList.remove('spots-pulse');
+        void el.offsetWidth;
+        el.classList.add('spots-pulse');
+      }
+    });
+    if (progressBar) {
+      var taken = MAX_TOTAL - data.count;
+      progressBar.style.width = taken + '%';
+    }
+    if (takenText) {
+      takenText.textContent = 'Зайнято ' + (MAX_TOTAL - data.count);
+    }
+  }
+
+  function save(){
+    data.lastVisit = Date.now();
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch(e) {}
+  }
+
+  render(false);
+  save();
+
+  function scheduleNext(){
+    if (data.count <= MIN_SPOTS) return;
+    // Random interval between 4-8 minutes
+    var delay = (4 + Math.random() * 4) * 60 * 1000;
+    setTimeout(function(){
+      if (data.count > MIN_SPOTS) {
+        data.count--;
+        data.lastTick = Date.now();
+        render(true);
+        save();
+        scheduleNext();
+      }
+    }, delay);
+  }
+
+  scheduleNext();
+  window.addEventListener('beforeunload', save);
+})();
+</script>
+
+</body>
+</html>
