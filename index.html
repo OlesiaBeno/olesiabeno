@@ -61,7 +61,7 @@ body {
 .hero-start-badge { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-size: 13px; font-weight: 500; color: var(--text); padding: 10px 18px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 999px; margin-bottom: 32px; opacity: 0; animation: fadeUp 0.8s ease 0.1s forwards; box-shadow: 0 1px 4px rgba(45, 34, 25, 0.04); }
 .hero-start-badge strong { font-weight: 700; color: var(--rose); }
 .hero-start-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--rose); animation: dotPulse 2s ease-in-out infinite; flex-shrink: 0; }
-@keyframes dotPulse { 0%, 100% { opacity: 0.5; transform: scale(1); box-shadow: 0 0 0 0 rgba(155,45,63,0.3); } 50% { opacity: 1; transform: scale(1.2); box-shadow: 0 0 8px 2px rgba(155,45,63,0.2); } }
+@keyframes dotPulse { 0%, 100% { opacity: 0.5; transform: scale(1); box-shadow: 0 0 0 0 rgba(155, 45, 63, 0.3); } 50% { opacity: 1; transform: scale(1.2); box-shadow: 0 0 8px 2px rgba(155, 45, 63, 0.2); } }
 
 .hero-hook { font-family: var(--font-display); font-weight: 500; font-size: 34px; color: var(--text); line-height: 1.18; letter-spacing: -0.015em; margin-bottom: 16px; opacity: 0; animation: fadeUp 0.8s ease 0.2s forwards; }
 .hero-highlight { position: relative; display: inline; }
@@ -79,7 +79,7 @@ body {
 .hero-comp-item { display: flex; flex-direction: column; align-items: center; gap: 10px; }
 .hero-comp-label { font-family: var(--font-body); font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; padding: 5px 14px; border-radius: 999px; line-height: 1; }
 .hero-comp-label--before { color: var(--text-muted); background: rgba(45,34,25,0.06); border: 1px solid var(--line); }
-.hero-comp-label--after { color: var(--rose); background: var(--rose-bg); border: 1px solid rgba(155,45,63,0.28); box-shadow: 0 2px 8px rgba(155,45,63,0.12); }
+.hero-comp-label--after { color: var(--rose); background: var(--rose-bg); border: 1px solid rgba(155, 45, 63, 0.28); box-shadow: 0 2px 8px rgba(155, 45, 63, 0.12); }
 .hero-comp-frame { position: relative; width: 100%; aspect-ratio: 3/4; border-radius: 14px; overflow: hidden; background: var(--bg-card); }
 .hero-comp-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .hero-comp-frame--before { border: 2px solid rgba(45,34,25,0.18); transform: rotate(-2.5deg); box-shadow: 0 4px 14px rgba(45,34,25,0.1); filter: saturate(0.5) brightness(0.96) contrast(0.95); }
@@ -163,9 +163,9 @@ body {
 .spots-sep { font-family: var(--font-display); font-size: 24px; color: var(--text-muted); padding-bottom: 18px; font-weight: 300; }
 .spots-progress-wrap { max-width: 300px; margin: 0 auto; }
 .spots-progress { height: 3px; background: var(--line); border-radius: 2px; overflow: hidden; }
-.spots-progress-fill { height: 100%; background: linear-gradient(90deg, var(--rose) 0%, var(--terracotta) 100%); border-radius: 2px; transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 0 6px rgba(155,45,63,0.2); }
+.spots-progress-fill { height: 100%; background: linear-gradient(90deg, var(--rose) 0%, var(--terracotta) 100%); border-radius: 2px; transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 0 6px rgba(155, 45, 63, 0.2); }
 .spots-progress-text { display: flex; justify-content: space-between; margin-top: 8px; font-family: var(--font-body); font-size: 9px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-muted); }
-@keyframes spotsPulse { 0% { transform: scale(1); } 30% { transform: scale(1.12); text-shadow: 0 0 10px rgba(155,45,63,0.4); } 100% { transform: scale(1); text-shadow: none; } }
+@keyframes spotsPulse { 0% { transform: scale(1); } 30% { transform: scale(1.12); text-shadow: 0 0 10px rgba(155, 45, 63, 0.4); } 100% { transform: scale(1); text-shadow: none; } }
 .spots-pulse { animation: spotsPulse 0.9s cubic-bezier(0.4, 0, 0.2, 1); }
 
 /* Bonus cards */
@@ -198,7 +198,7 @@ body {
 .problem-morning-card p { font-family: var(--font-body); font-size: 14px; font-weight: 400; color: rgba(255,255,255,0.75); line-height: 1.7; margin-bottom: 10px; position: relative; z-index: 1; }
 .problem-morning-card strong { color: #fff; font-weight: 600; }
 .problem-morning-end { color: rgba(255,255,255,0.95) !important; font-weight: 500 !important; margin-top: 16px !important; }
-.problem-quote-card { background: var(--rose-bg); border-radius: 14px; padding: 22px 20px; text-align: center; margin-bottom: 28px; border: 1px solid rgba(155,45,63,0.1); }
+.problem-quote-card { background: var(--rose-bg); border-radius: 14px; padding: 22px 20px; text-align: center; margin-bottom: 28px; border: 1px solid rgba(155, 45, 63, 0.1); }
 .problem-quote-text { font-family: var(--font-display); font-size: 22px; font-weight: 500; font-style: italic; color: var(--rose); letter-spacing: -0.01em; }
 .problem-also { font-family: var(--font-display); font-size: 17px; font-weight: 500; color: var(--text); margin-bottom: 16px; }
 .problem-cards { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
@@ -209,18 +209,18 @@ body {
 .problem-pains { display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
 .pain-card { position: relative; background: var(--bg-card); border: 1px solid rgba(45,34,25,0.07); border-radius: 16px; padding: 24px 22px 22px; transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease; box-shadow: 0 1px 4px rgba(45,34,25,0.03); overflow: hidden; }
 .pain-card::before { content: ''; position: absolute; left: 0; top: 24px; bottom: 22px; width: 3px; background: var(--rose); opacity: 0; transition: opacity 0.35s ease; border-radius: 0 2px 2px 0; }
-.pain-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(155,45,63,0.08); border-color: rgba(155,45,63,0.18); }
+.pain-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(155, 45, 63, 0.08); border-color: rgba(155, 45, 63, 0.18); }
 .pain-card:hover::before { opacity: 1; }
 .pain-tag { display: flex; align-items: center; gap: 12px; font-family: var(--font-body); font-size: 10px; font-weight: 700; color: var(--rose); letter-spacing: 0.24em; text-transform: uppercase; margin-bottom: 12px; }
 .pain-tag-num { font-family: var(--font-display); font-size: 14px; font-weight: 600; font-style: italic; letter-spacing: 0; color: var(--rose); line-height: 1; }
-.pain-tag::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(155,45,63,0.25) 0%, transparent 100%); }
+.pain-tag::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, rgba(155, 45, 63, 0.25) 0%, transparent 100%); }
 .pain-title { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--text); line-height: 1.3; letter-spacing: -0.01em; margin-bottom: 10px; }
 .pain-title em { font-style: italic; color: var(--rose); font-weight: 600; }
 .pain-text { font-family: var(--font-body); font-size: 14px; font-weight: 400; color: var(--text-soft); line-height: 1.7; }
 .pain-text strong { color: var(--text); font-weight: 600; }
 .pain-text em { font-style: italic; color: var(--rose); font-weight: 500; }
 .pain-text .pain-accent { color: var(--rose); font-weight: 600; font-style: normal; }
-.problem-absolve-card { background: var(--rose-bg); border-radius: 14px; padding: 24px 22px; text-align: center; border: 1px solid rgba(155,45,63,0.1); margin-bottom: 28px; }
+.problem-absolve-card { background: var(--rose-bg); border-radius: 14px; padding: 24px 22px; text-align: center; border: 1px solid rgba(155, 45, 63, 0.1); margin-bottom: 28px; }
 .problem-absolve-card p { font-family: var(--font-display); font-size: 17px; font-weight: 400; color: var(--text); line-height: 1.5; margin-bottom: 4px; }
 .problem-absolve-card p:last-child { margin-bottom: 0; }
 .problem-absolve-card em { color: var(--rose); font-style: italic; font-weight: 500; }
@@ -236,7 +236,7 @@ body {
 .process-title { font-family: var(--font-display); font-size: 20px; font-weight: 500; font-style: italic; color: var(--text); text-align: center; line-height: 1.3; margin-bottom: 22px; max-width: 340px; margin-left: auto; margin-right: auto; }
 .process-steps { display: flex; flex-direction: column; gap: 10px; }
 .process-step { background: var(--bg-card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; display: flex; align-items: center; gap: 16px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-.process-step:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(155,45,63,0.1); }
+.process-step:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(155, 45, 63, 0.1); }
 .process-num { font-family: var(--font-display); font-size: 28px; font-weight: 600; font-style: italic; color: var(--rose); line-height: 1; flex-shrink: 0; min-width: 36px; }
 .process-step p { font-family: var(--font-body); font-size: 14px; font-weight: 500; color: var(--text); line-height: 1.45; }
 .process-arrow-center { text-align: center; font-family: var(--font-display); font-size: 22px; color: var(--text-muted); margin: -2px 0; line-height: 1; }
@@ -256,10 +256,10 @@ body {
 .author-eyebrow { display: inline-block; font-family: var(--font-body); font-size: 11px; font-weight: 700; color: var(--rose); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 24px; }
 .author-photo-wrap { position: relative; width: 280px; height: 320px; margin: 0 auto 30px; }
 .author-photo-wrap::before { content: ''; position: absolute; inset: 0; background: var(--blush); border-radius: 22px; transform: rotate(0deg); opacity: 0.55; z-index: 0; }
-.author-photo-wrap::after { content: ''; position: absolute; inset: 0; border: 1.5px solid rgba(155,45,63,0.38); border-radius: 22px; transform: rotate(0deg); z-index: 0; }
-.author-photo-frame { position: relative; width: 100%; height: 100%; border-radius: 20px; border: 2.5px solid var(--rose); overflow: hidden; box-shadow: 0 14px 40px rgba(155,45,63,0.22), 0 4px 14px rgba(45,34,25,0.08); transform: rotate(0deg); z-index: 1; background: var(--bg); }
+.author-photo-wrap::after { content: ''; position: absolute; inset: 0; border: 1.5px solid rgba(155, 45, 63, 0.38); border-radius: 22px; transform: rotate(0deg); z-index: 0; }
+.author-photo-frame { position: relative; width: 100%; height: 100%; border-radius: 20px; border: 2.5px solid var(--rose); overflow: hidden; box-shadow: 0 14px 40px rgba(155, 45, 63, 0.22), 0 4px 14px rgba(45,34,25,0.08); transform: rotate(0deg); z-index: 1; background: var(--bg); }
 .author-photo-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.author-photo-monogram { position: absolute; bottom: -10px; right: -14px; width: 54px; height: 54px; border-radius: 50%; background: linear-gradient(135deg, var(--rose) 0%, var(--rose-soft) 100%); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-style: italic; font-weight: 700; font-size: 24px; box-shadow: 0 8px 22px rgba(155,45,63,0.38); transform: rotate(6deg); z-index: 2; letter-spacing: -0.02em; padding-bottom: 2px; }
+.author-photo-monogram { position: absolute; bottom: -10px; right: -14px; width: 54px; height: 54px; border-radius: 50%; background: linear-gradient(135deg, var(--rose) 0%, var(--rose-soft) 100%); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-style: italic; font-weight: 700; font-size: 24px; box-shadow: 0 8px 22px rgba(155, 45, 63, 0.38); transform: rotate(6deg); z-index: 2; letter-spacing: -0.02em; padding-bottom: 2px; }
 .author-photo-monogram::before { content: ''; position: absolute; inset: 3px; border: 1px solid rgba(255,255,255,0.35); border-radius: 50%; }
 .author-name { font-family: var(--font-display); font-size: 30px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
 .author-title { font-family: var(--font-body); font-size: 12px; font-weight: 500; color: var(--text-muted); letter-spacing: 0.08em; margin-bottom: 20px; }
@@ -298,9 +298,9 @@ body {
 /* ═══ WHOM HEADER PHOTO ═══ */
 .whom-author-label { text-align: center; font-size: 12px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px; }
 .whom-author-label strong { color: var(--rose); font-weight: 700; }
-.whom-header-photo { position: relative; width: 220px; height: 280px; margin: 0 auto 20px; border-radius: 14px; overflow: hidden; border: 2px solid var(--rose); transform: rotate(0deg); box-shadow: 0 10px 26px rgba(155,45,63,0.18), 0 3px 10px rgba(45,34,25,0.08); }
+.whom-header-photo { position: relative; width: 220px; height: 280px; margin: 0 auto 20px; border-radius: 14px; overflow: hidden; border: 2px solid var(--rose); transform: rotate(0deg); box-shadow: 0 10px 26px rgba(155, 45, 63, 0.18), 0 3px 10px rgba(45,34,25,0.08); }
 .whom-header-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.whom-header-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(155,45,63,0.18) 100%); }
+.whom-header-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(155, 45, 63, 0.18) 100%); }
 
 /* ═══ FINAL PATH ALIVE WITH BG PHOTO ═══ */
 .final-path--alive { position: relative; overflow: hidden; isolation: isolate; }
@@ -308,8 +308,8 @@ body {
 .final-path--alive::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,249,244,0.85) 0%, rgba(245,225,216,0.7) 100%); z-index: -1; }
 
 /* ═══ PROGRAM PHOTO ACCENT ═══ */
-.program-photo-accent { width: 100%; max-width: 280px; aspect-ratio: 4/5; margin: 32px auto 0; border-radius: 16px; overflow: hidden; border: 2px solid var(--rose); transform: rotate(1.5deg); box-shadow: 0 12px 30px rgba(45,34,25,0.15), 0 4px 10px rgba(45,34,25,0.06); }
-.program-photo-accent img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(0.1); }
+.program-photo-accent { width: 100%; max-width: 280px; aspect-ratio: 4/5; margin: 32px auto 0; border-radius: 16px; overflow: hidden; border: 2px solid var(--rose); transform: rotate(0deg); box-shadow: 0 12px 30px rgba(45,34,25,0.15), 0 4px 10px rgba(45,34,25,0.06); }
+.program-photo-accent img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; filter: grayscale(0.1); }
 
 /* ═══ GUARANTEE PHOTO ECHO (subtle bg of photo5 in side-corner) ═══ */
 .guarantee { position: relative; overflow: hidden; }
@@ -328,7 +328,7 @@ body {
 .footer-links { display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.08); margin-bottom: 24px; }
 .footer-links a { color: #fff; font-size: 13px; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; transition: color 0.2s ease; }
 .footer-links a:hover { color: var(--rose-soft); }
-.footer-copy { font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 0.1em; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.06); text-align: center; }
+.footer-copy { font-size: 10px; color: #ffffff; letter-spacing: 0.1em; padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.06); text-align: center; }
 
 
 /* ═══ TRANSFORMATION ═══ */
@@ -341,14 +341,14 @@ body {
 .transform-arrow { font-family: var(--font-display); font-size: 24px; color: var(--rose); align-self: center; margin-top: 40px; }
 .transform-col { border-radius: 16px; padding: 20px 16px; }
 .transform-col--before { background: var(--bg-warm); border: 1px solid var(--line); }
-.transform-col--after { background: var(--bg-card); border: 2px solid var(--rose); box-shadow: 0 4px 20px rgba(155,45,63,0.1); }
+.transform-col--after { background: var(--bg-card); border: 2px solid var(--rose); box-shadow: 0 4px 20px rgba(155, 45, 63, 0.1); }
 .transform-label { display: block; font-family: var(--font-body); font-size: 10px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; text-align: center; margin-bottom: 14px; padding: 5px 12px; border-radius: 999px; }
 .transform-label--before { color: var(--text-muted); background: rgba(45,34,25,0.06); }
 .transform-label--after { color: var(--rose); background: var(--rose-bg); }
 .transform-photo { width: 100%; aspect-ratio: 3/4; border-radius: 10px; overflow: hidden; margin-bottom: 14px; background: var(--bg); position: relative; }
 .transform-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .transform-photo--placeholder { border: 1.5px dashed rgba(45,34,25,0.15); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; color: var(--text-muted); }
-.transform-photo--after.transform-photo--placeholder { border-color: rgba(155,45,63,0.25); color: var(--rose); }
+.transform-photo--after.transform-photo--placeholder { border-color: rgba(155, 45, 63, 0.25); color: var(--rose); }
 .transform-photo--placeholder span { font-family: var(--font-body); font-size: 10px; font-weight: 500; letter-spacing: 0.06em; }
 .transform-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 8px; }
 .transform-list li { font-family: var(--font-body); font-size: 12px; font-weight: 500; color: var(--text-soft); line-height: 1.4; padding-left: 16px; position: relative; }
@@ -356,11 +356,24 @@ body {
 .transform-col--after .transform-list li { color: var(--text); }
 .transform-col--after .transform-list li::before { color: var(--rose); content: '✓'; font-size: 12px; left: 0; }
 
+/* ═══ PHILOSOPHY ═══ */
+.philosophy { padding: 40px 28px 36px; background: var(--text); position: relative; overflow: hidden; }
+.philosophy::before { content: ''; position: absolute; top: -60px; right: -60px; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, rgba(155, 45, 63, 0.25) 0%, transparent 70%); pointer-events: none; }
+.philosophy-eyebrow { display: inline-block; font-family: var(--font-body); font-size: 11px; font-weight: 700; color: var(--rose-soft); letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 14px; }
+.philosophy-title { font-family: var(--font-display); font-size: 26px; font-weight: 600; color: #fff; line-height: 1.2; margin-bottom: 28px; letter-spacing: -0.01em; }
+.philosophy-items { display: flex; flex-direction: column; gap: 20px; }
+.philosophy-item { display: flex; gap: 14px; align-items: flex-start; }
+.philosophy-diamond { width: 10px; height: 10px; min-width: 10px; background: var(--rose-soft); transform: rotate(45deg); margin-top: 6px; flex-shrink: 0; }
+.philosophy-body {}
+.philosophy-item-title { font-family: var(--font-display); font-size: 16px; font-weight: 600; color: #fff; line-height: 1.3; margin-bottom: 6px; }
+.philosophy-item-text { font-family: var(--font-body); font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.6); line-height: 1.7; }
+
 /* ═══ PROGRAM ═══ */
 .program { padding: 40px 28px 36px; background: var(--bg-warm); position: relative; }
 .program::before { content: ''; position: absolute; top: 0; left: 28px; right: 28px; height: 1px; background: var(--line); }
 .program-eyebrow { display: inline-block; font-family: var(--font-body); font-size: 11px; font-weight: 700; color: var(--rose); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px; }
 .program-title { font-family: var(--font-display); font-size: 24px; font-weight: 500; color: var(--text); margin-bottom: 24px; letter-spacing: -0.01em; }
+.program-sub { font-family: var(--font-body); font-size: 14px; color: var(--text-soft); line-height: 1.65; margin-bottom: 20px; margin-top: -10px; }
 .program-lessons { display: flex; flex-direction: column; gap: 8px; }
 .program-lesson { background: var(--bg); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; transition: box-shadow 0.3s ease; }
 .program-lesson:hover { box-shadow: 0 2px 12px rgba(45,34,25,0.06); }
@@ -380,6 +393,12 @@ body {
 .pl-homework { margin: 0 18px 18px 50px; background: var(--bg-warm); border-radius: 10px; padding: 14px 16px; }
 .pl-homework p { font-family: var(--font-body); font-size: 13px; font-weight: 400; color: var(--text-soft); line-height: 1.65; padding: 0; }
 .pl-note { font-family: var(--font-body); font-size: 12px; font-weight: 500; color: var(--terracotta); padding: 10px 16px; margin: 0 18px 14px 50px; border: 1px solid rgba(196,146,122,0.3); border-radius: 8px; background: rgba(196,146,122,0.06); }
+.pl-quote { font-family: var(--font-display); font-style: italic; font-size: 13px; color: var(--text-soft); line-height: 1.65; margin: 0 18px 14px 50px; padding: 12px 16px; border-left: 2px solid var(--terracotta); background: var(--bg-warm); border-radius: 0 8px 8px 0; }
+.pl-q-blocks { display: flex; flex-direction: column; gap: 8px; margin: 0 18px 18px 50px; }
+.pl-q-block { background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+.pl-q-title { font-family: var(--font-body); font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+.pl-q-answers { display: flex; flex-wrap: wrap; gap: 5px; }
+.pl-q-tag { font-family: var(--font-body); font-size: 11px; font-weight: 400; color: var(--text-soft); background: var(--bg-warm); padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
 
 /* ═══ FOR WHOM ═══ */
 .whom { padding: 40px 28px 36px; background: var(--bg); position: relative; }
@@ -402,7 +421,7 @@ body {
 .journey-steps { display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px; position: relative; }
 .journey-steps::before { content: ''; position: absolute; left: 23px; top: 30px; bottom: 30px; width: 2px; background: linear-gradient(180deg, var(--rose) 0%, var(--terracotta) 100%); opacity: 0.22; border-radius: 2px; z-index: 0; }
 .journey-step { display: flex; gap: 16px; align-items: flex-start; padding: 16px 18px 18px 14px; background: var(--bg); border: 1px solid var(--line); border-radius: 14px; transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; z-index: 1; }
-.journey-step:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(155,45,63,0.08); }
+.journey-step:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(155, 45, 63, 0.08); }
 .journey-num { width: 48px; height: 48px; min-width: 48px; border-radius: 50%; background: var(--bg); border: 2px solid var(--rose); color: var(--rose); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 17px; font-style: italic; font-weight: 700; line-height: 1; flex-shrink: 0; box-shadow: 0 0 0 4px var(--bg-warm); }
 .journey-body { flex: 1; min-width: 0; padding-top: 2px; }
 .journey-day { display: inline-block; font-family: var(--font-body); font-size: 9px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--rose); background: var(--rose-bg); padding: 4px 10px; border-radius: 999px; margin-bottom: 8px; }
@@ -413,7 +432,7 @@ body {
 .journey-result-text { font-family: var(--font-display); font-style: italic; font-size: 13px; color: var(--text); line-height: 1.5; font-weight: 500; }
 
 /* Final result (dark) */
-.journey-final { background: #1A1512; background-image: radial-gradient(ellipse at top right, rgba(155,45,63,0.3) 0%, transparent 60%); border-radius: 16px; padding: 32px 24px 28px; margin-top: 8px; }
+.journey-final { background: #1A1512; background-image: radial-gradient(ellipse at top right, rgba(155, 45, 63, 0.3) 0%, transparent 60%); border-radius: 16px; padding: 32px 24px 28px; margin-top: 8px; }
 .vstack-final-result { margin-top: 0; margin-bottom: 20px; }
 .journey-final-label { font-family: var(--font-body); font-size: 10px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--blush); margin-bottom: 14px; }
 .journey-final-title { font-family: var(--font-display); font-size: 19px; font-weight: 500; color: #fff; line-height: 1.35; margin-bottom: 20px; }
@@ -446,21 +465,21 @@ body {
 /* Enhanced guarantee — accent redesign */
 .guarantee { background: linear-gradient(180deg, var(--bg) 0%, var(--bg-card) 100%); padding: 48px 28px 40px; text-align: center; }
 .guarantee-shield { position: relative; width: 76px; height: 76px; margin: 0 auto 22px; }
-.guarantee-shield-icon { position: absolute; inset: 0; border-radius: 50%; background: linear-gradient(135deg, var(--rose) 0%, var(--rose-soft) 100%); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 20px; font-style: italic; font-weight: 700; line-height: 1; box-shadow: 0 10px 28px rgba(155,45,63,0.35); z-index: 1; }
-.guarantee-shield-ring { position: absolute; inset: -10px; border: 1.5px dashed rgba(155,45,63,0.45); border-radius: 50%; animation: badgeSpin 22s linear infinite; }
+.guarantee-shield-icon { position: absolute; inset: 0; border-radius: 50%; background: linear-gradient(135deg, var(--rose) 0%, var(--rose-soft) 100%); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 20px; font-style: italic; font-weight: 700; line-height: 1; box-shadow: 0 10px 28px rgba(155, 45, 63, 0.35); z-index: 1; }
+.guarantee-shield-ring { position: absolute; inset: -10px; border: 1.5px dashed rgba(155, 45, 63, 0.45); border-radius: 50%; animation: badgeSpin 22s linear infinite; }
 .guarantee-eyebrow { display: block; text-align: center; }
 .guarantee-title { text-align: center; font-size: 28px; }
 .guarantee-intro { text-align: center; max-width: 400px; margin: 0 auto 28px; font-size: 14.5px; }
-.guarantee-card-item { background: #fff; border: 1.5px solid rgba(155,45,63,0.2); padding: 22px 20px 22px 22px; box-shadow: 0 4px 18px rgba(155,45,63,0.07); position: relative; overflow: hidden; gap: 18px; text-align: left; }
+.guarantee-card-item { background: #fff; border: 1.5px solid rgba(155, 45, 63, 0.2); padding: 22px 20px 22px 22px; box-shadow: 0 4px 18px rgba(155, 45, 63, 0.07); position: relative; overflow: hidden; gap: 18px; text-align: left; }
 .guarantee-card-item::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: linear-gradient(180deg, var(--rose) 0%, var(--rose-soft) 100%); }
-.guarantee-bignum-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; min-width: 70px; padding: 4px 0; border-right: 1px solid rgba(155,45,63,0.12); padding-right: 16px; }
+.guarantee-bignum-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; min-width: 70px; padding: 4px 0; border-right: 1px solid rgba(155, 45, 63, 0.12); padding-right: 16px; }
 .guarantee-bignum { font-family: var(--font-display); font-weight: 700; font-style: italic; color: var(--rose); line-height: 0.9; letter-spacing: -0.03em; font-size: 42px; text-align: center; }
 .guarantee-bignum em { font-size: 22px; font-style: italic; font-weight: 600; }
 .guarantee-bignum-unit { font-family: var(--font-body); font-size: 9px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rose); margin-top: 8px; text-align: center; }
-.guarantee-closing { background: var(--rose-bg); border-radius: 14px; padding: 22px 20px; text-align: center; border: 1px solid rgba(155,45,63,0.14); margin-top: 18px; border-top: 1px solid rgba(155,45,63,0.14); }
+.guarantee-closing { background: var(--rose-bg); border-radius: 14px; padding: 22px 20px; text-align: center; border: 1px solid rgba(155, 45, 63, 0.14); margin-top: 18px; border-top: 1px solid rgba(155, 45, 63, 0.14); }
 @media (max-width: 380px) {
   .guarantee-card-item { flex-direction: column; align-items: flex-start; gap: 14px; }
-  .guarantee-bignum-wrap { flex-direction: row; gap: 10px; align-items: baseline; border-right: none; padding-right: 0; border-bottom: 1px solid rgba(155,45,63,0.12); padding-bottom: 10px; width: 100%; justify-content: flex-start; }
+  .guarantee-bignum-wrap { flex-direction: row; gap: 10px; align-items: baseline; border-right: none; padding-right: 0; border-bottom: 1px solid rgba(155, 45, 63, 0.12); padding-bottom: 10px; width: 100%; justify-content: flex-start; }
   .guarantee-bignum-unit { margin-top: 0; }
 }
 
@@ -510,7 +529,7 @@ body {
 .vstack-total-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
 .vstack-total-row span { font-family: var(--font-body); font-size: 11px; font-weight: 600; color: #A0917F; letter-spacing: 0.15em; text-transform: uppercase; }
 .vstack-total-old { font-family: var(--font-display); font-size: 20px !important; font-weight: 500; color: #8A7E72; text-decoration: line-through; }
-.vstack-total-final { text-align: center; padding: 20px 0 8px; border-top: 0.5px solid rgba(155,45,63,0.4); }
+.vstack-total-final { text-align: center; padding: 20px 0 8px; border-top: 0.5px solid rgba(155, 45, 63, 0.4); }
 .vstack-final-label { display: block; font-family: var(--font-body); font-size: 10px; font-weight: 700; color: #F5E1D8; letter-spacing: 0.3em; text-transform: uppercase; margin-bottom: 10px; }
 .vstack-final-price { display: block; font-family: var(--font-display); font-size: 72px; font-weight: 700; color: #fff; line-height: 1; letter-spacing: -0.04em; margin-bottom: 10px; }
 .vstack-final-price em { font-size: 28px; font-weight: 400; font-style: italic; color: #F5E1D8; }
@@ -532,7 +551,7 @@ body {
 .final-paths { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
 .final-path { border-radius: 14px; padding: 24px 20px; }
 .final-path--dead { background: var(--bg-warm); border: 1px solid var(--line); }
-.final-path--alive { background: var(--bg-card); border: 2px solid var(--rose); box-shadow: 0 4px 20px rgba(155,45,63,0.1); }
+.final-path--alive { background: var(--bg-card); border: 2px solid var(--rose); box-shadow: 0 4px 20px rgba(155, 45, 63, 0.1); }
 .final-path-tag { display: block; font-family: var(--font-body); font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 8px; }
 .final-path--dead .final-path-tag { color: var(--text-muted); }
 .final-path--alive .final-path-tag { color: var(--rose); }
@@ -549,8 +568,8 @@ body {
 .final-path--alive li::before { content: '✓'; position: absolute; left: 0; top: 7px; color: var(--rose); font-size: 13px; font-weight: 600; }
 .final-path-footer { font-family: var(--font-display); font-size: 14px; font-style: italic; padding-top: 12px; border-top: 0.5px solid var(--line); }
 .final-path--dead .final-path-footer { color: var(--text-muted); }
-.final-path--alive .final-path-footer { color: var(--rose); font-weight: 500; border-top-color: rgba(155,45,63,0.15); }
-.final-message { background: var(--rose-bg); border-radius: 14px; padding: 28px 22px; margin-bottom: 28px; border: 1px solid rgba(155,45,63,0.1); }
+.final-path--alive .final-path-footer { color: var(--rose); font-weight: 500; border-top-color: rgba(155, 45, 63, 0.15); }
+.final-message { background: var(--rose-bg); border-radius: 14px; padding: 28px 22px; margin-bottom: 28px; border: 1px solid rgba(155, 45, 63, 0.1); }
 .final-message p { font-family: var(--font-display); font-style: italic; font-size: 16px; color: var(--text); line-height: 1.55; margin-bottom: 14px; }
 .final-message p:last-child { margin-bottom: 0; }
 .final-message em { color: var(--rose); font-weight: 500; }
@@ -561,7 +580,7 @@ body {
 .final-price span { font-size: 16px; color: var(--text-muted); }
 .final-price-old { font-style: italic; text-decoration: line-through; }
 .final-price-new { font-size: 28px !important; font-weight: 700; color: var(--rose) !important; }
-.final-cta-btn { display: flex; align-items: center; justify-content: center; width: 100%; background: var(--rose); color: #fff; text-decoration: none; font-family: var(--font-body); font-size: 16px; font-weight: 700; padding: 22px; border-radius: 16px; margin-bottom: 14px; transition: all 0.3s ease; box-shadow: 0 6px 24px rgba(155,45,63,0.3); }
+.final-cta-btn { display: flex; align-items: center; justify-content: center; width: 100%; background: var(--rose); color: #fff; text-decoration: none; font-family: var(--font-body); font-size: 16px; font-weight: 700; padding: 22px; border-radius: 16px; margin-bottom: 14px; transition: all 0.3s ease; box-shadow: 0 6px 24px rgba(155, 45, 63, 0.3); }
 .final-cta-btn:hover { background: var(--rose-soft); transform: translateY(-2px); }
 .final-reassurance { font-family: var(--font-body); font-size: 12px; color: var(--text-muted); letter-spacing: 0.06em; }
 
@@ -701,17 +720,14 @@ body {
 
     <script>
     (function(){
-      var months = ['січня','лютого','березня','квітня','травня','червня','липня','серпня','вересня','жовтня','листопада','грудня'];
-      var tomorrow = new Date();
-      tomorrow.setDate(tomorrow.getDate() + 1);
-      document.getElementById('start-date').textContent = tomorrow.getDate() + ' ' + months[tomorrow.getMonth()];
+      document.getElementById('start-date').textContent = '6 червня';
     })();
     </script>
 
     <h1 class="hero-hook"><span class="hero-highlight">Стиль є</span> —<br>а <span class="hero-highlight">відчуття свого</span> немає?</h1>
 
     <p class="hero-subtext">
-      Не ще один урок стилю. А початок твоєї проявленості — всього <span class="hero-accent">6 кроків</span> до образу, який нарешті твій.
+      Для жінки, яка давно готова — але досі чекає дозволу бути собою. Всього <span class="hero-accent">6 кроків</span> — і ваш образ нарешті відображає хто ви є насправді.
     </p>
 
     <div class="hero-photo-wrap hero-comparison">
@@ -734,17 +750,17 @@ body {
     </div>
 
     <div class="hero-card">
-      <div class="hero-card-label">За 6 кроків ти:</div>
+      <div class="hero-card-label">За 6 кроків ви:</div>
       <ul class="hero-card-list">
-        <li><strong>Зрозумієш свою палітру</strong> — і перестанеш купувати колір, який забирає твою енергію</li>
-        <li><strong>Знайдеш свій тип фігури</strong> — одяг нарешті підкреслює тебе, а не навпаки</li>
-        <li><strong>Відкриєш свій стильовий напрямок</strong> — образ стане твоїм висловлюванням, не маскою</li>
-        <li><strong>Отримаєш формулу образів</strong> — збирайся за <em>5 хвилин</em> і виглядай як ти</li>
+        <li><strong>Зрозумієте свій внутрішній запит</strong> — який стан хочете транслювати і під які ситуації будуєте гардероб</li>
+        <li><strong>Визначите свій колір і тип фігури</strong> — більше жодних «не своїх» покупок і одягу, що не личить</li>
+        <li><strong>Знайдете свій стильовий напрямок</strong> — образ стане вашою мовою, а не маскою</li>
+        <li><strong>Отримаєте формулу образів</strong> — збирайтесь за <em>5 хвилин</em> і виглядайте бездоганно</li>
       </ul>
     </div>
 
     <div class="hero-result">
-      <p class="hero-result-text">Нарешті впізнаєш себе в дзеркалі — і виходитимеш із дому з <strong>відчуттям себе, а не просто «нормально виглядаю»</strong>.</p>
+      <p class="hero-result-text">Нарешті впізнаєте себе в дзеркалі — і виходитимете із дому з <strong>відчуттям себе, а не просто «нормально виглядаю»</strong>.</p>
     </div>
 
     <div class="hero-cta-wrap">
@@ -761,7 +777,7 @@ body {
         </div>
       </div>
 
-      <p class="hero-price-note">Після оплати тебе буде переадресовано в Telegram-бот, де знаходиться курс</p>
+      <p class="hero-price-note">Після оплати вас буде переадресовано в Telegram-бот, де знаходиться курс</p>
     </div>
 
     <div class="hero-lookbook">
@@ -778,7 +794,7 @@ body {
   <section class="bonuses">
 
     <div class="bonuses-header">
-      <h2 class="bonuses-title">Купуй курс до кінця таймеру та отримай <em>3 бонусні гайди</em> в подарунок, які підсилять твій результат</h2>
+      <h2 class="bonuses-title">Купуй курс до кінця таймеру та отримай <em>3 бонусні гайди</em> в подарунок, які підсилять ваш результат</h2>
     </div>
 
     <div class="bonuses-timer-wrap">
@@ -802,7 +818,7 @@ body {
           <p class="bonus-card-title">Гайд «Як підібрати окуляри під форму обличчя»</p>
           <div class="bonus-card-result">
             <span class="bonus-card-result-label">Результат</span>
-            <p class="bonus-card-result-text">Більше ніколи не купуєш окуляри навмання — знаєш точно які форми тебе підкреслюють.</p>
+            <p class="bonus-card-result-text">Знаєте точно яка форма оправи підсилює вашу зовнішність — і більше ніколи не купуєте навмання.</p>
           </div>
         </div>
       </div>
@@ -814,22 +830,11 @@ body {
           <p class="bonus-card-title">Гайд «Як підбирати аксесуари під різні типи вирізів»</p>
           <div class="bonus-card-result">
             <span class="bonus-card-result-label">Результат</span>
-            <p class="bonus-card-result-text">Нарешті починаєш носити аксесуари — і вони дійсно завершують образ, а не виглядають випадково.</p>
+            <p class="bonus-card-result-text">Аксесуар більше не випадковий — він навмисний. Знаєте правило пропорції і завжди обираєте те, що підкреслює саме вас.</p>
           </div>
         </div>
       </div>
 
-      <div class="bonus-card">
-        <div class="bonus-card-icon"><span class="bonus-gift">🎁</span></div>
-        <div class="bonus-card-body">
-          <span class="bonus-card-tag">Бонус 3</span>
-          <p class="bonus-card-title">Шпаргалка «6 стильових напрямків для твого гардеробу — обери свій»</p>
-          <div class="bonus-card-result">
-            <span class="bonus-card-result-label">Результат</span>
-            <p class="bonus-card-result-text">Нарешті розумієш свій стильовий напрямок — і одягаєшся як ти, а не «як всі».</p>
-          </div>
-        </div>
-      </div>
 
     </div>
 
@@ -846,9 +851,9 @@ body {
 
     <div class="problem-morning-card">
       <div class="problem-morning-time">7:40</div>
-      <p>Ти стоїш перед дзеркалом — вже в п'ятому варіанті вбрання за останні 20 хвилин.</p>
+      <p>Ви стоїте перед дзеркалом — вже в п'ятому варіанті вбрання за останні 20 хвилин.</p>
       <p>Гарна блузка — але з чим її носити? Нові штани — але до них більше нічого не підходить. Сукня — куплена три місяці тому — висить із біркою.</p>
-      <p>Ти виходиш у тому, що «і так зійде». Не тому що подобається. А тому що <strong>час вийшов</strong>.</p>
+      <p>Ви виходите у тому, що «і так зійде». Не тому що подобається. А тому що <strong>час вийшов</strong>.</p>
       <p class="problem-morning-end">І цей день починається з відчуття:</p>
     </div>
 
@@ -865,7 +870,7 @@ body {
           <span class="pain-tag-num">01</span>
           <span>Хаотичні покупки — гроші на вітер</span>
         </div>
-        <h3 class="pain-title">Купуєш речі — але <em>не розумієш куди їх носити</em></h3>
+        <h3 class="pain-title">Купуєте речі — але <em>не розумієте куди їх носити</em></h3>
         <p class="pain-text">Шопінг забирає час, енергію і кошти — а речі повертаються додому і висять мертвим вантажем. <strong>Ілюзія «багато одягу»</strong> — а носити насправді нічого.</p>
       </div>
 
@@ -874,8 +879,8 @@ body {
           <span class="pain-tag-num">02</span>
           <span>Кольори, що не пасують</span>
         </div>
-        <h3 class="pain-title">Купуєш «не свій» колір — і <em>виглядаєш втомлено</em></h3>
-        <p class="pain-text">Не знаєш які відтінки підкреслюють саме твою зовнішність. Купуєш те, що подобається на вішалці — а вдома розумієш, що <strong>воно не твоє</strong>. Колір забирає, а не підсилює.</p>
+        <h3 class="pain-title">Купуєте «не свій» колір — і <em>виглядаєте втомлено</em></h3>
+        <p class="pain-text">Не знаєте які відтінки підкреслюють саме вашу зовнішність. Купуєте те, що подобається на вішалці — а вдома розумієте, що <strong>воно не ваше</strong>. Колір забирає, а не підсилює.</p>
       </div>
 
       <div class="pain-card">
@@ -884,7 +889,7 @@ body {
           <span>Фасони, що не личать</span>
         </div>
         <h3 class="pain-title">Одяг або <em>ховає фігуру</em>, або підкреслює не те</h3>
-        <p class="pain-text">Не розумієш які фасони підходять саме твоєму типу фігури. В результаті — одяг або <strong>мішок мішком</strong>, або навпаки підкреслює те, чого хотілося б приховати.</p>
+        <p class="pain-text">Не розумієте які фасони підходять саме вашому типу фігури. В результаті — одяг або <strong>мішок мішком</strong>, або навпаки підкреслює те, чого хотілося б приховати.</p>
       </div>
 
       <div class="pain-card">
@@ -892,17 +897,17 @@ body {
           <span class="pain-tag-num">04</span>
           <span>Немає свого стилю</span>
         </div>
-        <h3 class="pain-title">Одягаєшся як <em>«всі»</em> — без своєї індивідуальності</h3>
-        <p class="pain-text">Хочеш транслювати свою енергію і стан через образ — але не знаєш як. <strong>Немає розуміння свого стильового напрямку</strong> — і виходить «як у всіх», а не «як я».</p>
+        <h3 class="pain-title">Одягаєтесь як <em>«всі»</em> — без своєї індивідуальності</h3>
+        <p class="pain-text">Хочете транслювати свою енергію і стан через образ — але не знаєте як. <strong>Немає розуміння свого стильового напрямку</strong> — і виходить «як у всіх», а не «як я».</p>
       </div>
 
       <div class="pain-card">
         <div class="pain-tag">
           <span class="pain-tag-num">05</span>
-          <span>Виглядаєш не так, як хочеться</span>
+          <span>Виглядаєте не так, як хочеться</span>
         </div>
         <h3 class="pain-title">Навіть з гарним одягом — <em>щось не так</em></h3>
-        <p class="pain-text">Намагаєшся, купуєш нове, дивишся Pinterest — а у дзеркалі <strong>все одно не той результат</strong>, який хотілося. Образ не збирається. Чому — незрозуміло.</p>
+        <p class="pain-text">Намагаєтесь, купуєте нове, дивитесь Pinterest — а у дзеркалі <strong>все одно не той результат</strong>, який хотілося. Образ не збирається. Чому — незрозуміло.</p>
       </div>
 
       <div class="pain-card">
@@ -910,8 +915,8 @@ body {
           <span class="pain-tag-num">06</span>
           <span>Образи займають години</span>
         </div>
-        <h3 class="pain-title">Не розумієш як зібрати стильний образ <em>за 5 хвилин</em></h3>
-        <p class="pain-text">Немає системи — немає формули. Кожен ранок як квест: що з чим поєднати, де акцент, які аксесуари. <strong>Витрачаєш час і нерви</strong> — замість того щоб просто виглядати добре.</p>
+        <h3 class="pain-title">Не розумієте як зібрати стильний образ <em>за 5 хвилин</em></h3>
+        <p class="pain-text">Немає системи — немає формули. Кожен ранок як квест: що з чим поєднати, де акцент, які аксесуари. <strong>Витрачаєте час і нерви</strong> — замість того щоб просто виглядати добре.</p>
       </div>
 
       <div class="pain-card">
@@ -919,12 +924,45 @@ body {
           <span class="pain-tag-num">07</span>
           <span>Аксесуари — terra incognita</span>
         </div>
-        <h3 class="pain-title">Стрес при виборі одягу — і <em>аксесуари взагалі не носиш</em></h3>
-        <p class="pain-text">Не знаєш як і з чим їх поєднувати — тому просто не носиш. А без аксесуарів образ залишається <strong>незавершеним і простим</strong>. Щоранку — стрес замість задоволення.</p>
+        <h3 class="pain-title">Стрес при виборі одягу — і <em>аксесуари взагалі не носите</em></h3>
+        <p class="pain-text">Не знаєте як і з чим їх поєднувати — тому просто не носите. А без аксесуарів образ залишається <strong>незавершеним і простим</strong>. Щоранку — стрес замість задоволення.</p>
       </div>
 
     </div>
 
+  </section>
+
+  <!-- ═══ PHILOSOPHY ═══ -->
+  <section class="philosophy">
+    <span class="philosophy-eyebrow">Моя філософія</span>
+    <h2 class="philosophy-title">Стиль — це ваша енергія, не чиясь</h2>
+    <div class="philosophy-items">
+
+      <div class="philosophy-item">
+        <span class="philosophy-diamond"></span>
+        <div class="philosophy-body">
+          <p class="philosophy-item-title">Стиль — це ваша енергія, не чиясь</p>
+          <p class="philosophy-item-text">Індивідуальний стиль вже живе в кожній жінці. Його не потрібно вигадувати або копіювати з Pinterest. Його потрібно дозволити собі проявити.</p>
+        </div>
+      </div>
+
+      <div class="philosophy-item">
+        <span class="philosophy-diamond"></span>
+        <div class="philosophy-body">
+          <p class="philosophy-item-title">Немає некрасивих людей</p>
+          <p class="philosophy-item-text">Є лише нав'язані шаблони і страх виділятись. Кожна зовнішність унікальна — і може бути розкрита через правильні інструменти та внутрішній дизайн.</p>
+        </div>
+      </div>
+
+      <div class="philosophy-item">
+        <span class="philosophy-diamond"></span>
+        <div class="philosophy-body">
+          <p class="philosophy-item-title">Оновлений образ — нове життя</p>
+          <p class="philosophy-item-text">Гардероб — це не про одяг. Це комунікація для впливу на ваш внутрішній стан і те, як вас сприймають інші.</p>
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <!-- ═══ FOR WHOM ═══ -->
@@ -934,19 +972,19 @@ body {
       <img src="photo1.jpg?v=3" alt="">
     </div>
     <span class="whom-eyebrow">Для кого</span>
-    <h2 class="whom-title">Цей курс для тебе, якщо:</h2>
+    <h2 class="whom-title">Цей курс для вас, якщо:</h2>
 
     <div class="whom-cards">
-      <div class="whom-card"><span class="whom-check">✓</span><p>Відчуваєш що стиль є — але він не твій. Щось завжди не так, і не знаєш що саме.</p></div>
-      <div class="whom-card"><span class="whom-check">✓</span><p>Ховаєшся за «безпечним» образом — чорне, базове, непомітне. Бо страшно виділятися.</p></div>
-      <div class="whom-card"><span class="whom-check">✓</span><p>Хочеш щоб образ відповідав твоєму рівню — стану, енергії, тій жінці яка ти є зсередини.</p></div>
-      <div class="whom-card"><span class="whom-check">✓</span><p>Дивишся в дзеркало і хочеш нарешті впізнати себе — не «нормально», а «це я».</p></div>
-      <div class="whom-card"><span class="whom-check">✓</span><p>Хочеш виражати себе через одяг — але не знаєш як, і виходить «як всі».</p></div>
-      <div class="whom-card"><span class="whom-check">✓</span><p>Готова зробити перший крок до стилю який справді твій — без дорогих шопінгів і стилістів.</p></div>
+      <div class="whom-card"><span class="whom-check">✓</span><p>Відчуваєте що стиль є — але він не ваш. Щось завжди не так, і не знаєте що саме.</p></div>
+      <div class="whom-card"><span class="whom-check">✓</span><p>Ховаєтесь за «безпечним» образом — чорне, базове, непомітне. Бо страшно виділятися.</p></div>
+      <div class="whom-card"><span class="whom-check">✓</span><p>Хочете щоб образ відповідав вашому рівню — стану, енергії, тій жінці яка ви є зсередини.</p></div>
+      <div class="whom-card"><span class="whom-check">✓</span><p>Дивитесь в дзеркало і хочете нарешті впізнати себе — не «нормально», а «це я».</p></div>
+      <div class="whom-card"><span class="whom-check">✓</span><p>Хочете виражати себе через одяг — але не знаєте як, і виходить «як всі».</p></div>
+      <div class="whom-card"><span class="whom-check">✓</span><p>Готові зробити перший крок до стилю який справді ваш — без дорогих шопінгів і стилістів.</p></div>
     </div>
 
     <div class="whom-note">
-      Неважливо де ти зараз — мама в декреті, підприємиця чи найманий працівник. <strong>Якщо ти жінка, яка хоче нарешті проявити себе через образ — цей курс для тебе.</strong>
+      Неважливо де ви зараз — мама в декреті, підприємиця чи найманий працівник. <strong>Якщо ви жінка, яка хоче нарешті проявити себе через образ — цей курс для вас.</strong>
     </div>
   </section>
 
@@ -967,45 +1005,45 @@ body {
             <li>Що таке «свій стиль» і як він відрізняється від «модного»</li>
           </ul>
           <p class="pl-label">Результат</p>
-          <div class="pl-result"><p>Зрозумієш чому досі не вдавалося знайти свій стиль — і отримаєш чіткий план із 6 наступних кроків.</p></div>
+          <div class="pl-result"><p>Зрозумієте чому досі не вдавалося знайти свій стиль — і отримаєте чіткий план із 6 наступних кроків.</p></div>
         </div>
       </div>
 
       <div class="program-lesson" onclick="this.classList.toggle('open')">
-        <div class="program-lesson-head"><span class="program-num">01</span><span class="program-lesson-name">Крок 1 · Твій запит</span><span class="program-chevron">+</span></div>
+        <div class="program-lesson-head"><span class="program-num">01</span><span class="program-lesson-name">Крок 1 · Ваш запит</span><span class="program-chevron">+</span></div>
         <div class="program-lesson-body">
           <p class="pl-label">Про що крок</p>
           <ul class="pl-list">
-            <li>Що ти хочеш змінити у своєму образі — і чому це важливо саме зараз</li>
-            <li>Як визначити свої стильові цілі</li>
-            <li>Аналіз поточного гардеробу: що працює, що ні</li>
+            <li>Як я почуваюся зараз — який мій внутрішній стан</li>
+            <li>Як хочу себе відчувати — якою хочу бути і яку енергію транслювати</li>
+            <li>Куди буду носити — офіс, повсякденний кежуал, святкові події</li>
           </ul>
           <p class="pl-label">Результат</p>
-          <div class="pl-result"><p>Чітко розумієш що саме потрібно змінити і куди рухатися. Більше не «щось не так» — є конкретний запит.</p></div>
+          <div class="pl-result"><p>Ви чітко зрозумієте свій внутрішній запит — який стан хочете транслювати, під які реальні ситуації будуєте гардероб. Це фундамент, без якого будь-який шопінг — це гроші на вітер.</p></div>
           <p class="pl-label">Домашнє завдання</p>
-          <div class="pl-homework"><p>Практичне завдання з аналізу свого стильового запиту.</p></div>
+          <div class="pl-homework"><p>Відповісти на 3 питання — не думайте, пишіть перше що відчуваєте. Тіло знає відповідь раніше за розум.</p></div>
         </div>
       </div>
 
       <div class="program-lesson" onclick="this.classList.toggle('open')">
-        <div class="program-lesson-head"><span class="program-num">02</span><span class="program-lesson-name">Крок 2 · Твоя палітра кольору</span><span class="program-chevron">+</span></div>
+        <div class="program-lesson-head"><span class="program-num">02</span><span class="program-lesson-name">Крок 2 · Ваша палітра кольору</span><span class="program-chevron">+</span></div>
         <div class="program-lesson-body">
           <p class="pl-label">Про що крок</p>
           <ul class="pl-list">
             <li>4 кольоротипи — характеристики і відмінності</li>
             <li>Як визначити свій кольоротип</li>
-            <li>Яка палітра підсилює твою зовнішність, а яка забирає енергію</li>
+            <li>Яка палітра підсилює вашу зовнішність, а яка забирає енергію</li>
             <li>Як використовувати свій колір у гардеробі</li>
           </ul>
           <p class="pl-label">Результат</p>
-          <div class="pl-result"><p>Знаєш свою кольорову палітру. Більше не купуєш «не своє» — обираєш тільки те, що дійсно тебе підкреслює.</p></div>
+          <div class="pl-result"><p>Ви визначите свій колорит зовнішності і зрозумієте, які кольори підсилюють вашу природну красу — а які забирають енергію і роблять вас втомленою навіть у дорогому одязі.</p></div>
           <p class="pl-label">Домашнє завдання</p>
-          <div class="pl-homework"><p>Визначити свій кольоротип і переглянути гардероб через призму кольору.</p></div>
+          <div class="pl-homework"><p>Визначте свій тип за натуральним кольором волосся і відтінком шкіри без макіяжу. Відкрийте шафу — яких кольорів більше? Вони «ваші» чи куплені тому що «так модно»?</p></div>
         </div>
       </div>
 
       <div class="program-lesson" onclick="this.classList.toggle('open')">
-        <div class="program-lesson-head"><span class="program-num">03</span><span class="program-lesson-name">Крок 3 · Твоя фігура</span><span class="program-chevron">+</span></div>
+        <div class="program-lesson-head"><span class="program-num">03</span><span class="program-lesson-name">Крок 3 · Ваша фігура</span><span class="program-chevron">+</span></div>
         <div class="program-lesson-body">
           <p class="pl-label">Про що крок</p>
           <ul class="pl-list">
@@ -1015,14 +1053,14 @@ body {
             <li>Що уникати — і чому</li>
           </ul>
           <p class="pl-label">Результат</p>
-          <div class="pl-result"><p>Знаєш свій тип фігури і розумієш які крої та силуети тебе підкреслюють. Одяг нарешті сидить так як треба.</p></div>
+          <div class="pl-result"><p>Ви визначите свій тип фігури і назавжди забудете про комплекси — бо зрозумієте: кожна фігура має свої інструменти. Завдання стилю — не приховати, а розкрити.</p></div>
           <p class="pl-label">Домашнє завдання</p>
-          <div class="pl-homework"><p>Виміряти параметри, визначити тип фігури і проаналізувати свій гардероб.</p></div>
+          <div class="pl-homework"><p>Визначте свій тип фігури. Знайдіть у шафі 2 речі, які красиво вас підкреслюють — зверніть увагу чому. Це і є ваш орієнтир.</p></div>
         </div>
       </div>
 
       <div class="program-lesson" onclick="this.classList.toggle('open')">
-        <div class="program-lesson-head"><span class="program-num">04</span><span class="program-lesson-name">Крок 4 · Твої напрямки стилю</span><span class="program-chevron">+</span></div>
+        <div class="program-lesson-head"><span class="program-num">04</span><span class="program-lesson-name">Крок 4 · Ваші напрямки стилю</span><span class="program-chevron">+</span></div>
         <div class="program-lesson-body">
           <p class="pl-label">Про що крок</p>
           <ul class="pl-list">
@@ -1031,14 +1069,14 @@ body {
             <li>Стиль як внутрішня мова — як виражати себе через образ</li>
           </ul>
           <p class="pl-label">Результат</p>
-          <div class="pl-result"><p>Розумієш свій стильовий напрямок і більше не одягаєшся «як всі». Маєш свою естетику і вмієш транслювати свою енергію через образ.</p></div>
+          <div class="pl-result"><p>Розумієте свій стильовий напрямок і більше не одягаєтесь «як всі». Маєте свою естетику і вмієте транслювати свою енергію через образ.</p></div>
           <p class="pl-label">Домашнє завдання</p>
           <div class="pl-homework"><p>Визначити свій стильовий напрямок і зібрати мудборд образів.</p></div>
         </div>
       </div>
 
       <div class="program-lesson" onclick="this.classList.toggle('open')">
-        <div class="program-lesson-head"><span class="program-num">05</span><span class="program-lesson-name">Крок 5 · Твої аксесуари</span><span class="program-chevron">+</span></div>
+        <div class="program-lesson-head"><span class="program-num">05</span><span class="program-lesson-name">Крок 5 · Ваші аксесуари</span><span class="program-chevron">+</span></div>
         <div class="program-lesson-body">
           <p class="pl-label">Про що крок</p>
           <ul class="pl-list">
@@ -1048,14 +1086,14 @@ body {
             <li>Сумка, ремінь, шарф, окуляри — правила вибору</li>
           </ul>
           <p class="pl-label">Результат</p>
-          <div class="pl-result"><p>Нарешті починаєш носити аксесуари — і вони завершують образ, а не виглядають випадково. Знаєш правила поєднання і більше не боїшся аксесуарів.</p></div>
+          <div class="pl-result"><p>Аксесуар — це не доповнення. Це фінальна заява. Саме він перетворює «одяглась» на «вийшла». Ви нарешті починаєте носити аксесуари навмисно — і вони завершують образ, а не виглядають випадково.</p></div>
           <p class="pl-label">Домашнє завдання</p>
           <div class="pl-homework"><p>Переглянути свої аксесуари, скласти 3 образи з різними акцентами.</p></div>
         </div>
       </div>
 
       <div class="program-lesson" onclick="this.classList.toggle('open')">
-        <div class="program-lesson-head"><span class="program-num">06</span><span class="program-lesson-name">Крок 6 · Твоя формула образів</span><span class="program-chevron">+</span></div>
+        <div class="program-lesson-head"><span class="program-num">06</span><span class="program-lesson-name">Крок 6 · Ваша формула образів</span><span class="program-chevron">+</span></div>
         <div class="program-lesson-body">
           <p class="pl-label">Про що крок</p>
           <ul class="pl-list">
@@ -1065,23 +1103,23 @@ body {
             <li>Готові формули для різних ситуацій: офіс, кежуал, вечір</li>
           </ul>
           <p class="pl-label">Результат</p>
-          <div class="pl-result"><p>Маєш просту систему для щоденних образів. Збираєшся стильно за 5 хвилин — без стресу і без питання «що вдягнути?»</p></div>
+          <div class="pl-result"><p>Маєте просту систему для щоденних образів. Збираєтесь стильно за 5 хвилин — без стресу і без питання «що вдягнути?»</p></div>
           <p class="pl-label">Домашнє завдання</p>
-          <div class="pl-homework"><p>Скласти 5 образів за авторською формулою і сфотографувати — це твоя шпаргалка.</p></div>
+          <div class="pl-homework"><p>Скласти 5 образів за авторською формулою і сфотографувати — це ваша шпаргалка.</p></div>
         </div>
       </div>
 
     </div>
 
     <div class="program-photo-accent">
-      <img src="photo5.jpg?v=4" alt="">
+      <img src="photo5.jpg?v=6" alt="">
     </div>
   </section>
 
   <!-- ═══ JOURNEY ═══ -->
   <section class="journey">
-    <span class="journey-eyebrow">Твій шлях</span>
-    <h2 class="journey-title">Як ти зміниш своє відношення до стилю <em>від кроку до кроку</em></h2>
+    <span class="journey-eyebrow">Ваш шлях</span>
+    <h2 class="journey-title">Як ви зміните своє відношення до стилю <em>від кроку до кроку</em></h2>
 
     <div class="journey-steps">
 
@@ -1089,8 +1127,8 @@ body {
         <span class="journey-num">01</span>
         <div class="journey-body">
           <span class="journey-day">Крок 1</span>
-          <p class="journey-step-title">Зрозумієш що саме хочеш змінити</p>
-          <p class="journey-step-text">Сформулюєш свій стильовий запит — і нарешті матимеш відповідь на «що саме не так» у своєму образі.</p>
+          <p class="journey-step-title">Зрозумієте що саме хочете змінити</p>
+          <p class="journey-step-text">Сформулюєте свій стильовий запит — і нарешті матимете відповідь на «що саме не так» у своєму образі.</p>
           <div class="journey-result">
             <span class="journey-result-arrow">→</span>
             <span class="journey-result-text">Чіткий напрямок замість розмитого «хочу краще виглядати».</span>
@@ -1102,11 +1140,11 @@ body {
         <span class="journey-num">02</span>
         <div class="journey-body">
           <span class="journey-day">Крок 2</span>
-          <p class="journey-step-title">Відкриєш свою кольорову палітру</p>
-          <p class="journey-step-text">Дізнаєшся які кольори підсилюють саме твою зовнішність. Більше ніяких «не свої» покупок.</p>
+          <p class="journey-step-title">Відкриєте свою кольорову палітру</p>
+          <p class="journey-step-text">Дізнаєтесь які кольори підсилюють саме вашу зовнішність. Більше ніяких «не свої» покупок.</p>
           <div class="journey-result">
             <span class="journey-result-arrow">→</span>
-            <span class="journey-result-text">Купуєш тільки «своє» — і виглядаєш свіжо і яскраво.</span>
+            <span class="journey-result-text">Купуєте тільки «своє» — і виглядаєте свіжо і яскраво.</span>
           </div>
         </div>
       </div>
@@ -1115,11 +1153,11 @@ body {
         <span class="journey-num">03</span>
         <div class="journey-body">
           <span class="journey-day">Крок 3</span>
-          <p class="journey-step-title">Зрозумієш свою фігуру і що їй личить</p>
-          <p class="journey-step-text">Знатимеш які фасони підкреслюють переваги і стануть твоїми найкращими союзниками.</p>
+          <p class="journey-step-title">Зрозумієте свою фігуру і що їй личить</p>
+          <p class="journey-step-text">Знатимете які фасони підкреслюють переваги і стануть вашими найкращими союзниками.</p>
           <div class="journey-result">
             <span class="journey-result-arrow">→</span>
-            <span class="journey-result-text">Одяг нарешті сидить так, як ти завжди хотіла.</span>
+            <span class="journey-result-text">Одяг нарешті сидить так, як ви завжди хотіли.</span>
           </div>
         </div>
       </div>
@@ -1128,8 +1166,8 @@ body {
         <span class="journey-num">04</span>
         <div class="journey-body">
           <span class="journey-day">Крок 4</span>
-          <p class="journey-step-title">Знайдеш свій стильовий напрямок</p>
-          <p class="journey-step-text">Перестанеш одягатися «як всі» — знайдеш свою естетику і почнеш транслювати свою енергію через образ.</p>
+          <p class="journey-step-title">Знайдете свій стильовий напрямок</p>
+          <p class="journey-step-text">Перестанете одягатися «як всі» — знайдете свою естетику і почнете транслювати свою енергію через образ.</p>
           <div class="journey-result">
             <span class="journey-result-arrow">→</span>
             <span class="journey-result-text">Свій стиль, своя енергія — впізнавана і цілісна.</span>
@@ -1141,8 +1179,8 @@ body {
         <span class="journey-num">05</span>
         <div class="journey-body">
           <span class="journey-day">Крок 5</span>
-          <p class="journey-step-title">Почнеш носити аксесуари з впевненістю</p>
-          <p class="journey-step-text">Дізнаєшся правила поєднання і нарешті перестанеш боятися аксесуарів. Вони стануть твоїм інструментом стилю.</p>
+          <p class="journey-step-title">Почнете носити аксесуари з впевненістю</p>
+          <p class="journey-step-text">Дізнаєтесь правила поєднання і нарешті перестанете боятися аксесуарів. Вони стануть вашим інструментом стилю.</p>
           <div class="journey-result">
             <span class="journey-result-arrow">→</span>
             <span class="journey-result-text">Кожен образ стає завершеним і виразним.</span>
@@ -1154,8 +1192,8 @@ body {
         <span class="journey-num">06</span>
         <div class="journey-body">
           <span class="journey-day">Крок 6</span>
-          <p class="journey-step-title">Збираєшся стильно за 5 хвилин</p>
-          <p class="journey-step-text">Маєш просту формулу образів. Більше ніякого ранкового стресу — тільки задоволення від того, як виглядаєш.</p>
+          <p class="journey-step-title">Збираєтесь стильно за 5 хвилин</p>
+          <p class="journey-step-text">Маєте просту формулу образів. Більше ніякого ранкового стресу — тільки задоволення від того, як виглядаєте.</p>
           <div class="journey-result">
             <span class="journey-result-arrow">→</span>
             <span class="journey-result-text">Нова версія себе — щодня, легко і з задоволенням.</span>
@@ -1170,7 +1208,7 @@ body {
   <!-- ═══ TRANSFORMATION ═══ -->
   <section class="transform">
     <span class="transform-eyebrow">Результат курсу</span>
-    <h2 class="transform-title">Твій образ <em>до</em> і <em>після</em> курсу</h2>
+    <h2 class="transform-title">Ваш образ <em>до</em> і <em>після</em> курсу</h2>
 
     <div class="transform-grid">
       <div class="transform-col transform-col--before">
@@ -1179,10 +1217,10 @@ body {
           <img src="before.png?v=3" alt="До курсу — невпевненість у стилі">
         </div>
         <ul class="transform-list">
-          <li>Ховаєшся за безпечним образом</li>
+          <li>Ховаєтесь за безпечним образом</li>
           <li>«Не своє» у дзеркалі</li>
           <li>Стрес і хаос щоранку</li>
-          <li>Образ не відповідає твоєму рівню</li>
+          <li>Образ не відповідає вашому рівню</li>
         </ul>
       </div>
 
@@ -1194,9 +1232,9 @@ body {
           <img src="after.png?v=2" alt="Після курсу — впевненість і стиль">
         </div>
         <ul class="transform-list">
-          <li>Впізнаєш себе в дзеркалі</li>
-          <li>Образ — твоє висловлювання</li>
-          <li>5 хвилин і ти готова</li>
+          <li>Впізнаєте себе в дзеркалі</li>
+          <li>Образ — ваше висловлювання</li>
+          <li>5 хвилин і ви готові</li>
           <li>Є своя енергія і проявленість</li>
         </ul>
       </div>
@@ -1214,9 +1252,9 @@ body {
     </div>
 
     <h2 class="author-name">Олеся Beno</h2>
-    <p class="author-title">Персональна стилістка · Імідж-дизайнерка</p>
+    <p class="author-title">Персональна стилістка · Імідж-дизайнерка<br>Авторка методу «Стиль через мислення»</p>
 
-    <blockquote class="author-quote">«Стиль — це не те, що ти вдягаєш. Це те, що ти транслюєш. І в кожній жінці вже закладений свій унікальний стиль — потрібно лише дозволити собі його проявити».</blockquote>
+    <blockquote class="author-quote">«Стиль починається не з шафи — а з розуміння, який стан ви хочете транслювати світу. Одяг — це мова. І важливо знати, що ви ним говорите».</blockquote>
 
     <div class="author-stats">
       <div class="author-stat"><span class="author-stat-num">10+</span><span class="author-stat-label">років досвіду</span></div>
@@ -1225,9 +1263,9 @@ body {
     </div>
 
     <div class="author-text">
-      <p>Я персональна стилістка та імідж-дизайнерка. За <strong>10+ років роботи</strong> я пройшла сотні трансформацій разом із клієнтками — і кожного разу переконуюся в одному: свій стиль уже є в кожній жінці. У її рисах, характері, енергії та способі жити.</p>
-      <p>Його не потрібно вигадувати або копіювати. <strong>Його потрібно дозволити собі проявити.</strong></p>
-      <p>З 2013 року — персональні клієнти, лекції та тренінги, зйомки реклами і кіно. За цей час я навчилася одному: <strong>стиль змінює не гардероб — він змінює те, як жінка себе відчуває.</strong></p>
+      <p>Я персональна стилістка та імідж-дизайнерка. Авторка методу «Стиль через мислення». За <strong>10+ років роботи</strong> — сотні трансформацій разом із клієнтками, які прийшли з відчуттям «щось не так» — і пішли з розумінням хто вони є.</p>
+      <p><strong>З 2013 року</strong> я допомагаю жінкам не просто одягатись красиво — а дозволяти собі бути собою повністю. У своїй зовнішності, у своєму образі, у своїй силі.</p>
+      <p>Стиль — це не про одяг. <strong>Це про внутрішній дозвіл бути видимою.</strong> І саме з цього я починаю з кожною жінкою.</p>
     </div>
   </section>
 
@@ -1237,9 +1275,9 @@ body {
       <div class="guarantee-shield-ring"></div>
       <div class="guarantee-shield-icon">100%</div>
     </div>
-    <span class="guarantee-eyebrow">Без ризику для тебе</span>
+    <span class="guarantee-eyebrow">Без ризику для вас</span>
     <h2 class="guarantee-title">Подвійна гарантія <em style="color:var(--rose);font-style:italic;">Beno</em></h2>
-    <p class="guarantee-intro">Ти вже пробувала щось подібне раніше — і не спрацювало. Я це розумію. <strong>Тому ризик беру повністю на себе.</strong></p>
+    <p class="guarantee-intro">Ви вже пробували щось подібне раніше — і не спрацювало. Я це розумію. <strong>Тому ризик беру повністю на себе.</strong></p>
 
     <div class="guarantee-cards">
       <div class="guarantee-card-item">
@@ -1250,7 +1288,7 @@ body {
         <div class="guarantee-card-body">
           <span class="guarantee-tag">Рівень 1 · Без умов</span>
           <h3 class="guarantee-card-title">Повернення коштів — без питань</h3>
-          <p>Якщо протягом <strong>14 днів</strong> після покупки вирішиш, що курс не підходить — напиши нам, і я поверну <strong>100% вартості</strong>. Без пояснень.</p>
+          <p>Якщо протягом <strong>14 днів</strong> після покупки вирішите, що курс не підходить — напишіть нам, і я поверну <strong>100% вартості</strong>. Без пояснень.</p>
         </div>
       </div>
       <div class="guarantee-card-item">
@@ -1261,40 +1299,40 @@ body {
         <div class="guarantee-card-body">
           <span class="guarantee-tag">Рівень 2 · Гарантія результату</span>
           <h3 class="guarantee-card-title">Не отримала результат — повертаю гроші</h3>
-          <p>Пройдеш усі 6 кроків, виконаєш домашні завдання — і не отримаєш результату? <strong>Напиши мені особисто.</strong> Повертаю повну суму.</p>
+          <p>Пройдете усі 6 кроків, виконаєте домашні завдання — і не отримаєте результату? <strong>Напиши мені особисто.</strong> Повертаю повну суму.</p>
         </div>
       </div>
     </div>
 
     <div class="guarantee-closing">
-      <p class="guarantee-closing-text">Ризик повністю на мені.<br>Тобі залишається тільки прийти і зробити.</p>
+      <p class="guarantee-closing-text">Ризик повністю на мені.<br>Вам залишається тільки прийти і зробити.</p>
       <p class="guarantee-signature">— <em>Олеся Beno</em></p>
     </div>
   </section>
 
   <!-- ═══ VALUE STACK ═══ -->
   <section class="vstack">
-    <span class="vstack-eyebrow">Що ти отримаєш</span>
+    <span class="vstack-eyebrow">Що ви отримаєте</span>
     <h2 class="vstack-title">Фінальна <em>пропозиція</em></h2>
     <p class="vstack-sub">Повний набір курсу, бонусів і гарантій</p>
 
     <div class="journey-final vstack-final-result">
       <p class="journey-final-label">Фінальний результат</p>
-      <p class="journey-final-title">Що ти отримаєш після проходження курсу «6 кроків до усвідомленого стилю»</p>
+      <p class="journey-final-title">Що ви отримаєте після проходження курсу «6 кроків до усвідомленого стилю»</p>
 
       <div class="journey-layer">
         <p class="journey-layer-tag">— Розуміння себе</p>
-        <p class="journey-layer-text">Ти знаєш свій кольоротип, тип фігури і стильовий напрямок. Більше жодних «не своїх» покупок і образів «як у всіх».</p>
+        <p class="journey-layer-text">Ви знаєте свій кольоротип, тип фігури і стильовий напрямок. Більше жодних «не своїх» покупок і образів «як у всіх».</p>
       </div>
 
       <div class="journey-layer">
         <p class="journey-layer-tag">— Щоденне життя</p>
-        <p class="journey-layer-text">Збираєшся за 5 хвилин замість 40. Маєш формулу образів і вмієш носити аксесуари. Кожен вихід з дому — з задоволенням.</p>
+        <p class="journey-layer-text">Збираєтесь за 5 хвилин замість 40. Маєте формулу образів і вмієте носити аксесуари. Кожен вихід з дому — з задоволенням.</p>
       </div>
 
       <div class="journey-layer">
         <p class="journey-layer-tag">— Відчуття</p>
-        <p class="journey-layer-text">Дивишся в дзеркало і впізнаєш себе. Не тому що купила нове — а тому що нарешті розумієш свій стиль. Ця впевненість — найцінніше, що ти винесеш з курсу.</p>
+        <p class="journey-layer-text">Дивитесь в дзеркало і впізнаєте себе. Не тому що купили нове — а тому що нарешті розумієте свій стиль. Ця впевненість — найцінніше, що ви винесете з курсу.</p>
       </div>
     </div>
 
@@ -1313,7 +1351,7 @@ body {
         <span class="vstack-check">✓</span>
         <div>
           <h4>Доступ до Telegram-бота назавжди</h4>
-          <p>Усі кроки залишаються у тебе — повертайся коли завгодно</p>
+          <p>Усі кроки залишаються у вас — повертайся коли завгодно</p>
         </div>
         <span class="vstack-price">$12</span>
       </div>
@@ -1322,7 +1360,7 @@ body {
         <span class="vstack-check">✓</span>
         <div>
           <h4>Особиста підтримка під час проходження</h4>
-          <p>Відповіді на твої запитання прямо в боті</p>
+          <p>Відповіді на ваші запитання прямо в боті</p>
         </div>
         <span class="vstack-price">$24</span>
       </div>
@@ -1347,15 +1385,6 @@ body {
         <span class="vstack-price">$9</span>
       </div>
 
-      <div class="vstack-item vstack-bonus">
-        <span class="vstack-check">✓</span>
-        <div>
-          <span class="vstack-tag">Бонус 3</span>
-          <h4>Шпаргалка <em>«6 стильових напрямків для твого гардеробу»</em></h4>
-          <p>Обери свій — і одягайся як ти</p>
-        </div>
-        <span class="vstack-price">$6</span>
-      </div>
 
       <div class="vstack-item vstack-guarantee-item">
         <span class="vstack-check">✓</span>
@@ -1396,16 +1425,16 @@ body {
       <div class="faq-item" onclick="this.classList.toggle('open')">
         <div class="faq-q"><span class="faq-num">01</span><span class="faq-q-text">Як я отримую доступ до курсу після оплати?</span><span class="faq-chevron">+</span></div>
         <div class="faq-a"><div class="faq-a-inner">
-          <p>Одразу після оплати ти отримаєш посилання на <strong>Telegram-бот курсу</strong>. Перший крок буде вже чекати там — можеш починати цього ж дня.</p>
-          <p>Далі новий крок приходить у бот <strong>щодня о 10:00 ранку</strong>. Нічого встановлювати не потрібно — Telegram у тебе вже є.</p>
+          <p>Одразу після оплати ви отримаєте посилання на <strong>Telegram-бот курсу</strong>. Перший крок буде вже чекати там — можете починати цього ж дня.</p>
+          <p>Далі новий крок приходить у бот <strong>щодня о 10:00 ранку</strong>. Нічого встановлювати не потрібно — Telegram у вас вже є.</p>
         </div></div>
       </div>
 
       <div class="faq-item" onclick="this.classList.toggle('open')">
         <div class="faq-q"><span class="faq-num">02</span><span class="faq-q-text">Чи підійде мені курс, якщо я не розбираюся в моді?</span><span class="faq-chevron">+</span></div>
         <div class="faq-a"><div class="faq-a-inner">
-          <p><strong>Так, і особливо для тебе.</strong> Курс не про моду — а про твій особистий стиль. Ти не вчиш «що модно цього сезону», а дізнаєшся що підходить саме тобі.</p>
-          <p>Ніяких складних теорій — все просто, практично і одразу застосовується до твого гардеробу.</p>
+          <p><strong>Так, і особливо для вас.</strong> Курс не про моду — а про ваш особистий стиль. Ви не вчите «що модно цього сезону», а дізнаєтесь що підходить саме вам.</p>
+          <p>Ніяких складних теорій — все просто, практично і одразу застосовується до вашого гардеробу.</p>
         </div></div>
       </div>
 
@@ -1413,22 +1442,22 @@ body {
         <div class="faq-q"><span class="faq-num">03</span><span class="faq-q-text">Скільки часу займає один крок разом з домашнім завданням?</span><span class="faq-chevron">+</span></div>
         <div class="faq-a"><div class="faq-a-inner">
           <p>Сам урок — <strong>7–12 хвилин</strong> залежно від теми. Домашнє завдання зазвичай на <strong>10–15 хвилин</strong>.</p>
-          <p>Разом — близько <em>30 хвилин на день</em>. Розподіляй як тобі зручно: зранку, увечері або на вихідних.</p>
+          <p>Разом — близько <em>30 хвилин на день</em>. Розподіляйте як вам зручно: зранку, увечері або на вихідних.</p>
         </div></div>
       </div>
 
       <div class="faq-item" onclick="this.classList.toggle('open')">
         <div class="faq-q"><span class="faq-num">04</span><span class="faq-q-text">Чи зберігається доступ до курсу назавжди?</span><span class="faq-chevron">+</span></div>
         <div class="faq-a"><div class="faq-a-inner">
-          <p><strong>Так.</strong> Доступ до Telegram-бота зі всіма кроками і бонусами залишається у тебе <em>назавжди</em>.</p>
-          <p>Можеш повертатися до будь-якого кроку — перед шопінгом, перед важливою подією або просто для нагадування. Усі матеріали завжди під рукою.</p>
+          <p><strong>Так.</strong> Доступ до Telegram-бота зі всіма кроками і бонусами залишається у вас <em>назавжди</em>.</p>
+          <p>Можете повертатися до будь-якого кроку — перед шопінгом, перед важливою подією або просто для нагадування. Усі матеріали завжди під рукою.</p>
         </div></div>
       </div>
 
       <div class="faq-item" onclick="this.classList.toggle('open')">
         <div class="faq-q"><span class="faq-num">05</span><span class="faq-q-text">Чи працює метод для будь-якої фігури та розміру?</span><span class="faq-chevron">+</span></div>
         <div class="faq-a"><div class="faq-a-inner">
-          <p><strong>Так.</strong> Курс не про «ідеальну фігуру». Він про те, як одягатись так, щоб підкреслити саме твої риси і твою жіночність.</p>
+          <p><strong>Так.</strong> Курс не про «ідеальну фігуру». Він про те, як одягатись так, щоб підкреслити саме ваші риси і вашу жіночність.</p>
           <p>«Не буває некрасивих людей — є лише навʼязані шаблони.» Курс працює для жінок будь-якого розміру і віку.</p>
         </div></div>
       </div>
@@ -1437,7 +1466,7 @@ body {
         <div class="faq-q"><span class="faq-num">06</span><span class="faq-q-text">Чому курс коштує лише $12?</span><span class="faq-chevron">+</span></div>
         <div class="faq-a"><div class="faq-a-inner">
           <p>Тому що це <strong>міні-курс</strong> — компактний, практичний і без води. Ми свідомо зробили ціну доступною, щоб якомога більше жінок отримали ці інструменти.</p>
-          <p>Цей курс містить ту саму систему — у форматі самостійного навчання. А ще — за $12 ти фактично ризикуєш нічим: є гарантія повернення.</p>
+          <p>Цей курс містить ту саму систему — у форматі самостійного навчання. А ще — за $12 ви фактично ризикуєте нічим: є гарантія повернення.</p>
         </div></div>
       </div>
 
@@ -1449,7 +1478,7 @@ body {
   <!-- ═══ FINAL CTA ═══ -->
   <section class="final">
     <span class="final-eyebrow">Останній крок</span>
-    <h2 class="final-title">Зараз ти на <em>роздоріжжі</em></h2>
+    <h2 class="final-title">Зараз ви на <em>роздоріжжі</em></h2>
 
     <div class="final-paths">
       <div class="final-path final-path--dead">
@@ -1470,10 +1499,10 @@ body {
         <h3>6 кроків із Олесею</h3>
         <p class="final-path-sub">Через тиждень:</p>
         <ul>
-          <li>Знаєш свій колір, фігуру і стильовий напрямок</li>
-          <li>Збираєш образи за 5 хвилин — без стресу</li>
-          <li>Носиш аксесуари і вони завершують образ</li>
-          <li>Дивишся в дзеркало — і нарешті впізнаєш себе</li>
+          <li>Знаєте свій колір, фігуру і стильовий напрямок</li>
+          <li>Збираєте образи за 5 хвилин — без стресу</li>
+          <li>Носите аксесуари і вони завершують образ</li>
+          <li>Дивитесь в дзеркало — і нарешті впізнаєте себе</li>
         </ul>
         <p class="final-path-footer">Нова версія себе — і це назавжди</p>
       </div>
@@ -1483,7 +1512,7 @@ body {
       <p>Я знаю як це — дивитися в дзеркало і відчувати що щось не так. Навіть коли одяг гарний. <em>Бо справа не в одязі — а в розумінні себе.</em></p>
       <p>Цей курс — це система, яку я шліфувала 10 років з сотнями клієнток.</p>
       <p>Зараз — <em>вперше</em> — я упакувала її в 6 простих кроків за $12. Щоб кожна жінка могла дозволити собі свій стиль.</p>
-      <p class="final-message-closing">Я чекаю тебе в боті вже завтра о 10:00.</p>
+      <p class="final-message-closing">Я чекаю вас в боті вже завтра о 10:00.</p>
       <p class="final-message-sig">— Олеся Beno</p>
     </div>
 
@@ -1502,15 +1531,12 @@ body {
   <footer class="site-footer">
     <div class="footer-fops">
       <div class="footer-fop">
-        <p class="footer-fop-name">Беньо Олеся Ярославівна ФОП</p>
-        <p class="footer-fop-line">ЄДРПОУ — буде додано після реєстрації</p>
-      </div>
+        <p class="footer-fop-name">Olesia Beno · Personal Stylist · Image Designer</p>
+        </div>
     </div>
 
     <div class="footer-disclaimer">
-      <p>IMPORTANT: Do not enter your name and email until you have read the Legal Disclaimer. The use of our site is subject to our Terms and Conditions. In addition, this page and our site make no guarantees and will not make any guarantees about your ability to generate results with your ideas, information, tools and resources, or strategies. You should know that all products and services by our company are for educational and informational purposes only. Nothing on this website, or any of our content or curriculum, is a promise, implication, or guarantee of results. Use caution and always consult your accountant, lawyer or professional adviser before acting on this or any information related to a lifestyle change or your business and finances. You alone are responsible and accountable for your decisions, actions and results in life, and by your registration here you agree not to attempt to hold us liable for your decisions, actions or results, at any time, under any circumstance.</p>
-
-      <p>ВАЖЛИВО: не вводьте своє ім’я та контактну інформацію, доки не прочитаєте Правове Повідомлення. Використання нашого сайту регулюється нашими Умовами та положеннями. На цій сторінці та нашому сайті не надається жодних гарантій щодо вашої здатності досягти результатів з вашими ідеями, інформацією, інструментами, ресурсами чи стратегіями. Усі продукти та послуги нашої компанії призначені виключно для освітніх та інформаційних цілей. Ніщо на цьому сайті або в будь-якому нашому навчальному матеріалі не є обіцянкою чи гарантією результатів. Будьте обережні та радьтеся зі своїм бухгалтером, юристом або професійним консультантом перед тим, як діяти на основі цієї або будь-якої іншої інформації, що стосується зміни способу життя, вашого бізнесу чи фінансів. Ви самостійно несете відповідальність за свої рішення, дії та результати. Реєструючись на цьому сайті, ви погоджуєтеся не намагатися притягти нас до відповідальності за ваші рішення, дії чи результати за будь-яких обставин.</p>
+      <p>Усі матеріали курсу призначені виключно для освітніх та інформаційних цілей. Результати залежать від індивідуальних зусиль кожної учасниці.</p>
     </div>
 
     <div class="footer-links">
