@@ -816,6 +816,7 @@ body {
       </div>
 
       <p class="hero-price-note">Після оплати вас буде переадресовано в Telegram-бот, де знаходиться курс</p>
+      <p class="hero-price-note" style="margin-top:6px; font-size:12px; color:#6B5D52;">💳 Якщо з'явиться форма адреси — заповніть: вулиця, місто, поштовий індекс</p>
     </div>
 
     <div class="hero-lookbook">
@@ -1562,6 +1563,7 @@ body {
       </div>
       <a href="https://app.zenedu.io/l/C2gX6RN0dIW9OclV" class="final-cta-btn">Забрати міні-курс за 490 грн →</a>
       <p class="final-reassurance">14 днів гарантія · Доступ назавжди · Без підписок</p>
+      <p class="final-reassurance" style="margin-top:6px; font-size:12px; color:#6B5D52;">💳 Якщо з'явиться форма адреси — заповніть: вулиця, місто, поштовий індекс</p>
     </div>
   </section>
 
@@ -1645,6 +1647,42 @@ body {
   }
   tick();
   setInterval(tick, 1000);
+})();
+
+/* ═══ FACEBOOK BROWSER DETECTION ═══ */
+(function(){
+  var ua = navigator.userAgent || '';
+  var isFBorIG = /FBAN|FBAV|FB_IAB|Instagram/i.test(ua);
+  if (!isFBorIG) return;
+
+  var banner = document.createElement('div');
+  banner.id = 'safari-banner';
+  banner.innerHTML = [
+    '<div style="display:flex;align-items:flex-start;gap:12px;">',
+    '<span style="font-size:22px;flex-shrink:0;">🔒</span>',
+    '<div>',
+    '<p style="font-weight:700;font-size:14px;margin-bottom:4px;">Для оплати через Apple Pay — відкрийте в Safari</p>',
+    '<p style="font-size:13px;opacity:0.85;">Натисніть <strong>···</strong> у правому куті → <strong>Відкрити в Safari</strong></p>',
+    '</div>',
+    '<button onclick="document.getElementById(\'safari-banner\').style.display=\'none\'" ',
+    'style="background:none;border:none;color:#fff;font-size:20px;cursor:pointer;flex-shrink:0;line-height:1;padding:0;margin-left:4px;">✕</button>',
+    '</div>'
+  ].join('');
+
+  Object.assign(banner.style, {
+    position: 'fixed',
+    top: '0',
+    left: '0',
+    right: '0',
+    zIndex: '9999',
+    background: '#9B2D3F',
+    color: '#fff',
+    padding: '14px 16px',
+    fontFamily: 'Montserrat, sans-serif',
+    boxShadow: '0 2px 12px rgba(0,0,0,0.2)'
+  });
+
+  document.body.insertBefore(banner, document.body.firstChild);
 })();
 
 /* ═══ STICKY CTA — show after scrolling past bonuses ═══ */
