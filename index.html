@@ -382,7 +382,7 @@ body {
 .transform-col--after .transform-list li::before { color: var(--rose); content: '✓'; font-size: 12px; left: 0; }
 
 /* ═══ PHILOSOPHY ═══ */
-.philosophy { padding: 40px 28px 36px; background: var(--text); position: relative; overflow: hidden; }
+.philosophy { padding: 40px 28px 36px; background: var(--bg-card); position: relative; overflow: hidden; }
 .philosophy::before { content: ''; position: absolute; top: -60px; right: -60px; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, rgba(155, 45, 63, 0.25) 0%, transparent 70%); pointer-events: none; }
 .philosophy-eyebrow { display: inline-block; font-family: var(--font-body); font-size: 11px; font-weight: 700; color: var(--rose-soft); letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 14px; }
 .philosophy-title { font-family: var(--font-display); font-size: 26px; font-weight: 600; color: #fff; line-height: 1.2; margin-bottom: 28px; letter-spacing: -0.01em; }
@@ -468,7 +468,7 @@ body {
 .journey-layer-text em { color: var(--blush); font-style: normal; font-weight: 500; }
 
 /* ═══ GUARANTEE ═══ */
-.guarantee { padding: 40px 28px 36px; background: var(--bg); position: relative; }
+.guarantee { padding: 40px 28px 36px; background: var(--bg-card); position: relative; }
 .guarantee::before { content: ''; position: absolute; top: 0; left: 28px; right: 28px; height: 1px; background: var(--line); }
 .guarantee-eyebrow { display: inline-block; font-family: var(--font-body); font-size: 11px; font-weight: 700; color: var(--rose); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px; }
 .guarantee-title { font-family: var(--font-display); font-size: 26px; font-weight: 600; color: var(--text); margin-bottom: 16px; }
@@ -483,7 +483,7 @@ body {
 .guarantee-card-body p { font-family: var(--font-body); font-size: 13px; color: var(--text-soft); line-height: 1.65; }
 .guarantee-card-body strong { color: var(--rose); font-weight: 600; }
 .guarantee-closing { text-align: center; padding-top: 20px; border-top: 1px solid var(--line); }
-.guarantee-closing-text { font-family: var(--font-display); font-style: italic; font-size: 17px; color: var(--text); line-height: 1.5; margin-bottom: 12px; }
+.guarantee-closing-text { font-family: var(--font-display); font-style: italic; font-size: 17px; color: #1C1410; line-height: 1.5; margin-bottom: 12px; }
 .guarantee-signature { font-family: var(--font-display); font-size: 20px; color: var(--rose); font-weight: 500; }
 .guarantee-signature em { font-style: italic; }
 
@@ -501,7 +501,7 @@ body {
 .guarantee-bignum { font-family: var(--font-display); font-weight: 700; font-style: italic; color: var(--rose); line-height: 0.9; letter-spacing: -0.03em; font-size: 42px; text-align: center; }
 .guarantee-bignum em { font-size: 22px; font-style: italic; font-weight: 600; }
 .guarantee-bignum-unit { font-family: var(--font-body); font-size: 9px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rose); margin-top: 8px; text-align: center; }
-.guarantee-closing { background: var(--rose-bg); border-radius: 14px; padding: 22px 20px; text-align: center; border: 1px solid rgba(155, 45, 63, 0.14); margin-top: 18px; border-top: 1px solid rgba(155, 45, 63, 0.14); }
+.guarantee-closing { background: #ffffff; border-radius: 14px; padding: 22px 20px; text-align: center; border: 1px solid rgba(155, 45, 63, 0.14); margin-top: 18px; border-top: 1px solid rgba(155, 45, 63, 0.14); }
 @media (max-width: 380px) {
   .guarantee-card-item { flex-direction: column; align-items: flex-start; gap: 14px; }
   .guarantee-bignum-wrap { flex-direction: row; gap: 10px; align-items: baseline; border-right: none; padding-right: 0; border-bottom: 1px solid rgba(155, 45, 63, 0.12); padding-bottom: 10px; width: 100%; justify-content: flex-start; }
@@ -589,7 +589,7 @@ body {
 .final-path li:last-child { border-bottom: none; }
 .final-path--dead li { color: var(--text-muted); }
 .final-path--dead li::before { content: '×'; position: absolute; left: 0; top: 7px; color: var(--text-muted); font-size: 16px; }
-.final-path--alive li { color: var(--text); }
+.final-path--alive li { color: #1C1410; }
 .final-path--alive li::before { content: '✓'; position: absolute; left: 0; top: 7px; color: var(--rose); font-size: 13px; font-weight: 600; }
 .final-path-footer { font-family: var(--font-display); font-size: 14px; font-style: italic; padding-top: 12px; border-top: 0.5px solid var(--line); }
 .final-path--dead .final-path-footer { color: var(--text-muted); }
@@ -749,10 +749,10 @@ body {
     })();
     </script>
 
-    <h1 class="hero-hook"><span class="hero-highlight">Одягу багато</span>,<br>а того що <span class="hero-highlight">вам пасує</span> - не знаєте?</h1>
+    <h1 class="hero-hook">Ти пам'ятаєш коли востаннє<br>дивилася в дзеркало і думала —<br><span class="hero-highlight">«Так. Це я.»?</span></h1>
 
     <p class="hero-subtext">
-      Ви купуєте нові речі, витрачаєте гроші, час і енергію - а в результаті купуєте те саме і нічого не міняється. Настав час це змінити за <span class="hero-accent">6 кроків</span>.
+      Більшість жінок роками купують одяг — але так і не відчувають себе собою. Міні-курс <span class="hero-accent">«6 кроків»</span> допоможе нарешті це змінити.
     </p>
 
     <div style="display:flex; flex-direction:column; gap:8px; margin: 20px 0 4px;">
